@@ -874,6 +874,7 @@ IL2CPP_EXTERN_C RuntimeClass* XRGrabInteractable_t8F7EA04527E7074002690EA93ACEAE
 IL2CPP_EXTERN_C RuntimeClass* XRInteractableEvent_t58E835C64FCD79C1322F5DDCAE92F3D40FCB2093_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* XRInteractableSnapVolume_tD614E0736458EA1101162BA07F94960E19F18E25_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* XRInteractorLineVisual_tE94C9C3412104E7A3564BEB8D2A37BD934F0456D_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* XRInteractorReticleVisual_t17EB63B209272B9D6C1A1484D1FC62D1155AE7EE_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* XRRayInteractor_t0B25C1D5A938B199A71908E189AB351B43DA4C76_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* XRSocketInteractor_t955B5778E5057E61463018DC1817B84363C54591_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* XRTintInteractableVisual_tDA1701AD756B1D2446D919D55C8139863F88D8C0_il2cpp_TypeInfo_var;
@@ -4775,50 +4776,70 @@ struct XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158  : public Mono
 	HashSetList_1_t4D485A2E14AF33326E4D8B5E60BEDD0E47CEE3F0* ___m_InteractablesSelected_26;
 	// UnityEngine.XR.Interaction.Toolkit.IXRSelectInteractable UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::<firstInteractableSelected>k__BackingField
 	RuntimeObject* ___U3CfirstInteractableSelectedU3Ek__BackingField_27;
+	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::<isInteractingWithUI>k__BackingField
+	bool ___U3CisInteractingWithUIU3Ek__BackingField_28;
 	// System.Collections.Generic.List`1<UnityEngine.Object> UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::m_StartingHoverFilters
-	List_1_t9A2E2984B23260AECDFA90CEB1F2887075FA4DF3* ___m_StartingHoverFilters_28;
+	List_1_t9A2E2984B23260AECDFA90CEB1F2887075FA4DF3* ___m_StartingHoverFilters_29;
 	// UnityEngine.XR.Interaction.Toolkit.Utilities.ExposedRegistrationList`1<UnityEngine.XR.Interaction.Toolkit.Filtering.IXRHoverFilter> UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::m_HoverFilters
-	ExposedRegistrationList_1_t11A438A04DF188A3BE1950639AAF0CBFAF9065A5* ___m_HoverFilters_29;
+	ExposedRegistrationList_1_t11A438A04DF188A3BE1950639AAF0CBFAF9065A5* ___m_HoverFilters_30;
 	// System.Collections.Generic.List`1<UnityEngine.Object> UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::m_StartingSelectFilters
-	List_1_t9A2E2984B23260AECDFA90CEB1F2887075FA4DF3* ___m_StartingSelectFilters_30;
+	List_1_t9A2E2984B23260AECDFA90CEB1F2887075FA4DF3* ___m_StartingSelectFilters_31;
 	// UnityEngine.XR.Interaction.Toolkit.Utilities.ExposedRegistrationList`1<UnityEngine.XR.Interaction.Toolkit.Filtering.IXRSelectFilter> UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::m_SelectFilters
-	ExposedRegistrationList_1_t0AF641D8E06922C1FFAF3DA223105F57CE5BC4D8* ___m_SelectFilters_31;
+	ExposedRegistrationList_1_t0AF641D8E06922C1FFAF3DA223105F57CE5BC4D8* ___m_SelectFilters_32;
 	// Unity.XR.CoreUtils.Bindings.Variables.BindableVariable`1<System.Single> UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::m_LargestInteractionStrength
-	BindableVariable_1_tAB8C2D23769D801C8E39D4AA927DD23AF0E6816C* ___m_LargestInteractionStrength_32;
+	BindableVariable_1_tAB8C2D23769D801C8E39D4AA927DD23AF0E6816C* ___m_LargestInteractionStrength_33;
 	// System.Collections.Generic.Dictionary`2<UnityEngine.XR.Interaction.Toolkit.IXRSelectInteractable,UnityEngine.Pose> UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::m_AttachPoseOnSelect
-	Dictionary_2_tC8CDB97AFC9E538A6AF3126874A321065572174C* ___m_AttachPoseOnSelect_33;
+	Dictionary_2_tC8CDB97AFC9E538A6AF3126874A321065572174C* ___m_AttachPoseOnSelect_34;
 	// System.Collections.Generic.Dictionary`2<UnityEngine.XR.Interaction.Toolkit.IXRSelectInteractable,UnityEngine.Pose> UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::m_LocalAttachPoseOnSelect
-	Dictionary_2_tC8CDB97AFC9E538A6AF3126874A321065572174C* ___m_LocalAttachPoseOnSelect_34;
+	Dictionary_2_tC8CDB97AFC9E538A6AF3126874A321065572174C* ___m_LocalAttachPoseOnSelect_35;
 	// Unity.XR.CoreUtils.Collections.HashSetList`1<UnityEngine.XR.Interaction.Toolkit.IXRInteractionStrengthInteractable> UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::m_InteractionStrengthInteractables
-	HashSetList_1_tC1867B681AE7023306C341F97E7483BB3C8532B2* ___m_InteractionStrengthInteractables_35;
+	HashSetList_1_tC1867B681AE7023306C341F97E7483BB3C8532B2* ___m_InteractionStrengthInteractables_36;
 	// System.Collections.Generic.Dictionary`2<UnityEngine.XR.Interaction.Toolkit.IXRInteractable,System.Single> UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::m_InteractionStrengths
-	Dictionary_2_tEABA4693399BB94F9F9031F041277F4D01CA9BB2* ___m_InteractionStrengths_36;
+	Dictionary_2_tEABA4693399BB94F9F9031F041277F4D01CA9BB2* ___m_InteractionStrengths_37;
 	// UnityEngine.XR.Interaction.Toolkit.IXRSelectInteractable UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::m_ManualInteractionInteractable
-	RuntimeObject* ___m_ManualInteractionInteractable_37;
+	RuntimeObject* ___m_ManualInteractionInteractable_38;
 	// UnityEngine.XR.Interaction.Toolkit.XRInteractionManager UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::m_RegisteredInteractionManager
-	XRInteractionManager_t93C7F7F0CFEAD83E1A70F92D05B0E663483746CD* ___m_RegisteredInteractionManager_38;
+	XRInteractionManager_t93C7F7F0CFEAD83E1A70F92D05B0E663483746CD* ___m_RegisteredInteractionManager_39;
+	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::<useAttachPointVelocity>k__BackingField
+	bool ___U3CuseAttachPointVelocityU3Ek__BackingField_42;
+	// UnityEngine.Vector3 UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::<attachPointVelocity>k__BackingField
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___U3CattachPointVelocityU3Ek__BackingField_43;
+	// UnityEngine.Vector3 UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::<attachPointAngularVelocity>k__BackingField
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___U3CattachPointAngularVelocityU3Ek__BackingField_44;
 	// UnityEngine.XR.Interaction.Toolkit.TargetPriorityMode UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::<targetPriorityMode>k__BackingField
-	int32_t ___U3CtargetPriorityModeU3Ek__BackingField_41;
+	int32_t ___U3CtargetPriorityModeU3Ek__BackingField_45;
 	// System.Collections.Generic.List`1<UnityEngine.XR.Interaction.Toolkit.IXRSelectInteractable> UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::<targetsForSelection>k__BackingField
-	List_1_tC3FDFEE51803D5C604CED1C088BC2B8A566E0E5B* ___U3CtargetsForSelectionU3Ek__BackingField_42;
+	List_1_tC3FDFEE51803D5C604CED1C088BC2B8A566E0E5B* ___U3CtargetsForSelectionU3Ek__BackingField_46;
+	// System.Single UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::m_DeltaTimeStart
+	float ___m_DeltaTimeStart_47;
+	// System.Int32 UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::m_FrameOn
+	int32_t ___m_FrameOn_49;
+	// UnityEngine.Vector3[] UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::m_VelocityPositionsCache
+	Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* ___m_VelocityPositionsCache_50;
+	// UnityEngine.Vector3[] UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::m_VelocityNormalsCache
+	Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* ___m_VelocityNormalsCache_51;
+	// UnityEngine.Vector3 UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::m_VelocityPositionsSum
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___m_VelocityPositionsSum_52;
+	// UnityEngine.Vector3 UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::m_VelocityNormalsSum
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___m_VelocityNormalsSum_53;
 	// UnityEngine.XR.Interaction.Toolkit.XRInteractorEvent UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::m_OnHoverEntered
-	XRInteractorEvent_tA90E755406526412871F25BB621E7F4536CD00E2* ___m_OnHoverEntered_43;
+	XRInteractorEvent_tA90E755406526412871F25BB621E7F4536CD00E2* ___m_OnHoverEntered_54;
 	// UnityEngine.XR.Interaction.Toolkit.XRInteractorEvent UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::m_OnHoverExited
-	XRInteractorEvent_tA90E755406526412871F25BB621E7F4536CD00E2* ___m_OnHoverExited_44;
+	XRInteractorEvent_tA90E755406526412871F25BB621E7F4536CD00E2* ___m_OnHoverExited_55;
 	// UnityEngine.XR.Interaction.Toolkit.XRInteractorEvent UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::m_OnSelectEntered
-	XRInteractorEvent_tA90E755406526412871F25BB621E7F4536CD00E2* ___m_OnSelectEntered_45;
+	XRInteractorEvent_tA90E755406526412871F25BB621E7F4536CD00E2* ___m_OnSelectEntered_56;
 	// UnityEngine.XR.Interaction.Toolkit.XRInteractorEvent UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::m_OnSelectExited
-	XRInteractorEvent_tA90E755406526412871F25BB621E7F4536CD00E2* ___m_OnSelectExited_46;
+	XRInteractorEvent_tA90E755406526412871F25BB621E7F4536CD00E2* ___m_OnSelectExited_57;
 	// System.Collections.Generic.List`1<UnityEngine.XR.Interaction.Toolkit.XRBaseInteractable> UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::<hoverTargets>k__BackingField
-	List_1_t02510C493B34D49F210C22C40442D863A08509CB* ___U3ChoverTargetsU3Ek__BackingField_47;
+	List_1_t02510C493B34D49F210C22C40442D863A08509CB* ___U3ChoverTargetsU3Ek__BackingField_58;
 };
 
 struct XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158_StaticFields
 {
 	// UnityEngine.XR.Interaction.Toolkit.XRInteractionManager UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::s_InteractionManagerCache
-	XRInteractionManager_t93C7F7F0CFEAD83E1A70F92D05B0E663483746CD* ___s_InteractionManagerCache_39;
+	XRInteractionManager_t93C7F7F0CFEAD83E1A70F92D05B0E663483746CD* ___s_InteractionManagerCache_40;
 	// Unity.Profiling.ProfilerMarker UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::s_ProcessInteractionStrengthMarker
-	ProfilerMarker_tA256E18DA86EDBC5528CE066FC91C96EE86501AD ___s_ProcessInteractionStrengthMarker_40;
+	ProfilerMarker_tA256E18DA86EDBC5528CE066FC91C96EE86501AD ___s_ProcessInteractionStrengthMarker_41;
 };
 
 // UnityEngine.InputSystem.XR.XRController
@@ -5123,20 +5144,30 @@ struct XRInteractorReticleVisual_t17EB63B209272B9D6C1A1484D1FC62D1155AE7EE  : pu
 	LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB ___m_RaycastMask_13;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRInteractorReticleVisual::m_ReticleActive
 	bool ___m_ReticleActive_14;
+	// Unity.XR.CoreUtils.XROrigin UnityEngine.XR.Interaction.Toolkit.XRInteractorReticleVisual::m_XROrigin
+	XROrigin_t5E534A6D886991AF3C1C64127E19A3A510009CFE* ___m_XROrigin_16;
 	// UnityEngine.GameObject UnityEngine.XR.Interaction.Toolkit.XRInteractorReticleVisual::m_ReticleInstance
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___m_ReticleInstance_15;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___m_ReticleInstance_17;
 	// UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor UnityEngine.XR.Interaction.Toolkit.XRInteractorReticleVisual::m_Interactor
-	XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* ___m_Interactor_16;
+	XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* ___m_Interactor_18;
 	// UnityEngine.Vector3[] UnityEngine.XR.Interaction.Toolkit.XRInteractorReticleVisual::m_InteractorLinePoints
-	Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* ___m_InteractorLinePoints_17;
+	Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* ___m_InteractorLinePoints_19;
 	// UnityEngine.Vector3 UnityEngine.XR.Interaction.Toolkit.XRInteractorReticleVisual::m_TargetEndPoint
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___m_TargetEndPoint_18;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___m_TargetEndPoint_20;
 	// UnityEngine.Vector3 UnityEngine.XR.Interaction.Toolkit.XRInteractorReticleVisual::m_TargetEndNormal
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___m_TargetEndNormal_19;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___m_TargetEndNormal_21;
 	// UnityEngine.PhysicsScene UnityEngine.XR.Interaction.Toolkit.XRInteractorReticleVisual::m_LocalPhysicsScene
-	PhysicsScene_t55222DD37072E8560EE054A07C0E3FE391D9D9DE ___m_LocalPhysicsScene_20;
+	PhysicsScene_t55222DD37072E8560EE054A07C0E3FE391D9D9DE ___m_LocalPhysicsScene_22;
+	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRInteractorReticleVisual::m_HasRaycastHit
+	bool ___m_HasRaycastHit_23;
 	// UnityEngine.RaycastHit[] UnityEngine.XR.Interaction.Toolkit.XRInteractorReticleVisual::m_RaycastHits
-	RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* ___m_RaycastHits_21;
+	RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* ___m_RaycastHits_24;
+};
+
+struct XRInteractorReticleVisual_t17EB63B209272B9D6C1A1484D1FC62D1155AE7EE_StaticFields
+{
+	// Unity.XR.CoreUtils.XROrigin UnityEngine.XR.Interaction.Toolkit.XRInteractorReticleVisual::s_XROriginCache
+	XROrigin_t5E534A6D886991AF3C1C64127E19A3A510009CFE* ___s_XROriginCache_15;
 };
 
 // Unity.XR.CoreUtils.XROrigin
@@ -5242,101 +5273,101 @@ struct ActionBasedController_tB9D8E7E013191571EA5507EA68057414B6969A68  : public
 struct XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E  : public XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158
 {
 	// UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor/InputTriggerType UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_SelectActionTrigger
-	int32_t ___m_SelectActionTrigger_48;
+	int32_t ___m_SelectActionTrigger_59;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_HideControllerOnSelect
-	bool ___m_HideControllerOnSelect_49;
+	bool ___m_HideControllerOnSelect_60;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_AllowHoveredActivate
-	bool ___m_AllowHoveredActivate_50;
+	bool ___m_AllowHoveredActivate_61;
 	// UnityEngine.XR.Interaction.Toolkit.TargetPriorityMode UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_TargetPriorityMode
-	int32_t ___m_TargetPriorityMode_51;
+	int32_t ___m_TargetPriorityMode_62;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_PlayAudioClipOnSelectEntered
-	bool ___m_PlayAudioClipOnSelectEntered_52;
+	bool ___m_PlayAudioClipOnSelectEntered_63;
 	// UnityEngine.AudioClip UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_AudioClipForOnSelectEntered
-	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___m_AudioClipForOnSelectEntered_53;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___m_AudioClipForOnSelectEntered_64;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_PlayAudioClipOnSelectExited
-	bool ___m_PlayAudioClipOnSelectExited_54;
+	bool ___m_PlayAudioClipOnSelectExited_65;
 	// UnityEngine.AudioClip UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_AudioClipForOnSelectExited
-	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___m_AudioClipForOnSelectExited_55;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___m_AudioClipForOnSelectExited_66;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_PlayAudioClipOnSelectCanceled
-	bool ___m_PlayAudioClipOnSelectCanceled_56;
+	bool ___m_PlayAudioClipOnSelectCanceled_67;
 	// UnityEngine.AudioClip UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_AudioClipForOnSelectCanceled
-	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___m_AudioClipForOnSelectCanceled_57;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___m_AudioClipForOnSelectCanceled_68;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_PlayAudioClipOnHoverEntered
-	bool ___m_PlayAudioClipOnHoverEntered_58;
+	bool ___m_PlayAudioClipOnHoverEntered_69;
 	// UnityEngine.AudioClip UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_AudioClipForOnHoverEntered
-	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___m_AudioClipForOnHoverEntered_59;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___m_AudioClipForOnHoverEntered_70;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_PlayAudioClipOnHoverExited
-	bool ___m_PlayAudioClipOnHoverExited_60;
+	bool ___m_PlayAudioClipOnHoverExited_71;
 	// UnityEngine.AudioClip UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_AudioClipForOnHoverExited
-	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___m_AudioClipForOnHoverExited_61;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___m_AudioClipForOnHoverExited_72;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_PlayAudioClipOnHoverCanceled
-	bool ___m_PlayAudioClipOnHoverCanceled_62;
+	bool ___m_PlayAudioClipOnHoverCanceled_73;
 	// UnityEngine.AudioClip UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_AudioClipForOnHoverCanceled
-	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___m_AudioClipForOnHoverCanceled_63;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___m_AudioClipForOnHoverCanceled_74;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_AllowHoverAudioWhileSelecting
-	bool ___m_AllowHoverAudioWhileSelecting_64;
+	bool ___m_AllowHoverAudioWhileSelecting_75;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_PlayHapticsOnSelectEntered
-	bool ___m_PlayHapticsOnSelectEntered_65;
+	bool ___m_PlayHapticsOnSelectEntered_76;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_HapticSelectEnterIntensity
-	float ___m_HapticSelectEnterIntensity_66;
+	float ___m_HapticSelectEnterIntensity_77;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_HapticSelectEnterDuration
-	float ___m_HapticSelectEnterDuration_67;
+	float ___m_HapticSelectEnterDuration_78;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_PlayHapticsOnSelectExited
-	bool ___m_PlayHapticsOnSelectExited_68;
+	bool ___m_PlayHapticsOnSelectExited_79;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_HapticSelectExitIntensity
-	float ___m_HapticSelectExitIntensity_69;
+	float ___m_HapticSelectExitIntensity_80;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_HapticSelectExitDuration
-	float ___m_HapticSelectExitDuration_70;
+	float ___m_HapticSelectExitDuration_81;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_PlayHapticsOnSelectCanceled
-	bool ___m_PlayHapticsOnSelectCanceled_71;
+	bool ___m_PlayHapticsOnSelectCanceled_82;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_HapticSelectCancelIntensity
-	float ___m_HapticSelectCancelIntensity_72;
+	float ___m_HapticSelectCancelIntensity_83;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_HapticSelectCancelDuration
-	float ___m_HapticSelectCancelDuration_73;
+	float ___m_HapticSelectCancelDuration_84;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_PlayHapticsOnHoverEntered
-	bool ___m_PlayHapticsOnHoverEntered_74;
+	bool ___m_PlayHapticsOnHoverEntered_85;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_HapticHoverEnterIntensity
-	float ___m_HapticHoverEnterIntensity_75;
+	float ___m_HapticHoverEnterIntensity_86;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_HapticHoverEnterDuration
-	float ___m_HapticHoverEnterDuration_76;
+	float ___m_HapticHoverEnterDuration_87;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_PlayHapticsOnHoverExited
-	bool ___m_PlayHapticsOnHoverExited_77;
+	bool ___m_PlayHapticsOnHoverExited_88;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_HapticHoverExitIntensity
-	float ___m_HapticHoverExitIntensity_78;
+	float ___m_HapticHoverExitIntensity_89;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_HapticHoverExitDuration
-	float ___m_HapticHoverExitDuration_79;
+	float ___m_HapticHoverExitDuration_90;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_PlayHapticsOnHoverCanceled
-	bool ___m_PlayHapticsOnHoverCanceled_80;
+	bool ___m_PlayHapticsOnHoverCanceled_91;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_HapticHoverCancelIntensity
-	float ___m_HapticHoverCancelIntensity_81;
+	float ___m_HapticHoverCancelIntensity_92;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_HapticHoverCancelDuration
-	float ___m_HapticHoverCancelDuration_82;
+	float ___m_HapticHoverCancelDuration_93;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_AllowHoverHapticsWhileSelecting
-	bool ___m_AllowHoverHapticsWhileSelecting_83;
+	bool ___m_AllowHoverHapticsWhileSelecting_94;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_AllowActivate
-	bool ___m_AllowActivate_84;
+	bool ___m_AllowActivate_95;
 	// UnityEngine.XR.Interaction.Toolkit.XRBaseController UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_Controller
-	XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* ___m_Controller_85;
+	XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* ___m_Controller_96;
 	// UnityEngine.XR.Interaction.Toolkit.Utilities.Pooling.LinkedPool`1<UnityEngine.XR.Interaction.Toolkit.ActivateEventArgs> UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_ActivateEventArgs
-	LinkedPool_1_t99CFF33CB8085652A0F2FC6579D0388FB3CBAA01* ___m_ActivateEventArgs_86;
+	LinkedPool_1_t99CFF33CB8085652A0F2FC6579D0388FB3CBAA01* ___m_ActivateEventArgs_97;
 	// UnityEngine.XR.Interaction.Toolkit.Utilities.Pooling.LinkedPool`1<UnityEngine.XR.Interaction.Toolkit.DeactivateEventArgs> UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_DeactivateEventArgs
-	LinkedPool_1_t0F5C109EA19EF35798DEF24B63645919D0B7B53B* ___m_DeactivateEventArgs_87;
+	LinkedPool_1_t0F5C109EA19EF35798DEF24B63645919D0B7B53B* ___m_DeactivateEventArgs_98;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_ToggleSelectActive
-	bool ___m_ToggleSelectActive_89;
+	bool ___m_ToggleSelectActive_100;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_ToggleSelectDeactivatedThisFrame
-	bool ___m_ToggleSelectDeactivatedThisFrame_90;
+	bool ___m_ToggleSelectDeactivatedThisFrame_101;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_WaitingForSelectDeactivate
-	bool ___m_WaitingForSelectDeactivate_91;
+	bool ___m_WaitingForSelectDeactivate_102;
 	// UnityEngine.AudioSource UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::m_EffectsAudioSource
-	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___m_EffectsAudioSource_92;
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___m_EffectsAudioSource_103;
 	// System.Collections.Generic.List`1<UnityEngine.XR.Interaction.Toolkit.XRBaseInteractable> UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::<validTargets>k__BackingField
-	List_1_t02510C493B34D49F210C22C40442D863A08509CB* ___U3CvalidTargetsU3Ek__BackingField_93;
+	List_1_t02510C493B34D49F210C22C40442D863A08509CB* ___U3CvalidTargetsU3Ek__BackingField_104;
 };
 
 struct XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_StaticFields
 {
 	// System.Collections.Generic.List`1<UnityEngine.XR.Interaction.Toolkit.IXRActivateInteractable> UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::s_ActivateTargets
-	List_1_tAB2FD3FF9900A585A26C6DC2D8EE94D30F2AECCA* ___s_ActivateTargets_88;
+	List_1_tAB2FD3FF9900A585A26C6DC2D8EE94D30F2AECCA* ___s_ActivateTargets_99;
 };
 
 // UnityEngine.XR.Interaction.Toolkit.XRController
@@ -5344,28 +5375,30 @@ struct XRController_t928E104C899E51FDE12C0A8AC68874587C46C28F  : public XRBaseCo
 {
 	// UnityEngine.XR.XRNode UnityEngine.XR.Interaction.Toolkit.XRController::m_ControllerNode
 	int32_t ___m_ControllerNode_24;
+	// UnityEngine.XR.XRNode UnityEngine.XR.Interaction.Toolkit.XRController::m_InputDeviceControllerNode
+	int32_t ___m_InputDeviceControllerNode_25;
 	// UnityEngine.XR.Interaction.Toolkit.InputHelpers/Button UnityEngine.XR.Interaction.Toolkit.XRController::m_SelectUsage
-	int32_t ___m_SelectUsage_25;
+	int32_t ___m_SelectUsage_26;
 	// UnityEngine.XR.Interaction.Toolkit.InputHelpers/Button UnityEngine.XR.Interaction.Toolkit.XRController::m_ActivateUsage
-	int32_t ___m_ActivateUsage_26;
+	int32_t ___m_ActivateUsage_27;
 	// UnityEngine.XR.Interaction.Toolkit.InputHelpers/Button UnityEngine.XR.Interaction.Toolkit.XRController::m_UIPressUsage
-	int32_t ___m_UIPressUsage_27;
+	int32_t ___m_UIPressUsage_28;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRController::m_AxisToPressThreshold
-	float ___m_AxisToPressThreshold_28;
+	float ___m_AxisToPressThreshold_29;
 	// UnityEngine.XR.Interaction.Toolkit.InputHelpers/Button UnityEngine.XR.Interaction.Toolkit.XRController::m_RotateAnchorLeft
-	int32_t ___m_RotateAnchorLeft_29;
+	int32_t ___m_RotateAnchorLeft_30;
 	// UnityEngine.XR.Interaction.Toolkit.InputHelpers/Button UnityEngine.XR.Interaction.Toolkit.XRController::m_RotateAnchorRight
-	int32_t ___m_RotateAnchorRight_30;
+	int32_t ___m_RotateAnchorRight_31;
 	// UnityEngine.XR.Interaction.Toolkit.InputHelpers/Button UnityEngine.XR.Interaction.Toolkit.XRController::m_MoveObjectIn
-	int32_t ___m_MoveObjectIn_31;
+	int32_t ___m_MoveObjectIn_32;
 	// UnityEngine.XR.Interaction.Toolkit.InputHelpers/Button UnityEngine.XR.Interaction.Toolkit.XRController::m_MoveObjectOut
-	int32_t ___m_MoveObjectOut_32;
+	int32_t ___m_MoveObjectOut_33;
 	// UnityEngine.XR.Interaction.Toolkit.InputHelpers/Axis2D UnityEngine.XR.Interaction.Toolkit.XRController::m_DirectionalAnchorRotation
-	int32_t ___m_DirectionalAnchorRotation_33;
+	int32_t ___m_DirectionalAnchorRotation_34;
 	// UnityEngine.Experimental.XR.Interaction.BasePoseProvider UnityEngine.XR.Interaction.Toolkit.XRController::m_PoseProvider
-	BasePoseProvider_t55E2883DF2C8052200284D64B68471636876FA1D* ___m_PoseProvider_34;
+	BasePoseProvider_t55E2883DF2C8052200284D64B68471636876FA1D* ___m_PoseProvider_35;
 	// UnityEngine.XR.InputDevice UnityEngine.XR.Interaction.Toolkit.XRController::m_InputDevice
-	InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD ___m_InputDevice_35;
+	InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD ___m_InputDevice_36;
 };
 
 // UnityEngine.InputSystem.XR.XRControllerWithRumble
@@ -5577,167 +5610,167 @@ struct XRSimpleInteractable_t3A9B4306E28507FF98E52F5203CE896262679E79  : public 
 struct XRSocketInteractor_t955B5778E5057E61463018DC1817B84363C54591  : public XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158
 {
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRSocketInteractor::m_ShowInteractableHoverMeshes
-	bool ___m_ShowInteractableHoverMeshes_48;
+	bool ___m_ShowInteractableHoverMeshes_59;
 	// UnityEngine.Material UnityEngine.XR.Interaction.Toolkit.XRSocketInteractor::m_InteractableHoverMeshMaterial
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___m_InteractableHoverMeshMaterial_49;
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___m_InteractableHoverMeshMaterial_60;
 	// UnityEngine.Material UnityEngine.XR.Interaction.Toolkit.XRSocketInteractor::m_InteractableCantHoverMeshMaterial
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___m_InteractableCantHoverMeshMaterial_50;
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___m_InteractableCantHoverMeshMaterial_61;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRSocketInteractor::m_SocketActive
-	bool ___m_SocketActive_51;
+	bool ___m_SocketActive_62;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRSocketInteractor::m_InteractableHoverScale
-	float ___m_InteractableHoverScale_52;
+	float ___m_InteractableHoverScale_63;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRSocketInteractor::m_RecycleDelayTime
-	float ___m_RecycleDelayTime_53;
+	float ___m_RecycleDelayTime_64;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRSocketInteractor::m_LastRemoveTime
-	float ___m_LastRemoveTime_54;
+	float ___m_LastRemoveTime_65;
 	// System.Collections.Generic.List`1<UnityEngine.XR.Interaction.Toolkit.IXRInteractable> UnityEngine.XR.Interaction.Toolkit.XRSocketInteractor::<unsortedValidTargets>k__BackingField
-	List_1_t3B3CED900C4A273E3B63AAB5493C4D6D4B112810* ___U3CunsortedValidTargetsU3Ek__BackingField_55;
+	List_1_t3B3CED900C4A273E3B63AAB5493C4D6D4B112810* ___U3CunsortedValidTargetsU3Ek__BackingField_66;
 	// System.Collections.Generic.HashSet`1<UnityEngine.Collider> UnityEngine.XR.Interaction.Toolkit.XRSocketInteractor::m_StayedColliders
-	HashSet_1_t109CCE87260348881F7ED50EEE3FFD003542DC8B* ___m_StayedColliders_56;
+	HashSet_1_t109CCE87260348881F7ED50EEE3FFD003542DC8B* ___m_StayedColliders_67;
 	// UnityEngine.XR.Interaction.Toolkit.Utilities.TriggerContactMonitor UnityEngine.XR.Interaction.Toolkit.XRSocketInteractor::m_TriggerContactMonitor
-	TriggerContactMonitor_t7534ED632C47D926F92937DE752DA2D4DC79AEA2* ___m_TriggerContactMonitor_57;
+	TriggerContactMonitor_t7534ED632C47D926F92937DE752DA2D4DC79AEA2* ___m_TriggerContactMonitor_68;
 	// System.Collections.Generic.Dictionary`2<UnityEngine.XR.Interaction.Toolkit.IXRInteractable,System.ValueTuple`2<UnityEngine.MeshFilter,UnityEngine.Renderer>[]> UnityEngine.XR.Interaction.Toolkit.XRSocketInteractor::m_MeshFilterCache
-	Dictionary_2_t14A82D8EE895A25F44AC7AA14CC61ACFFAB8DC95* ___m_MeshFilterCache_58;
+	Dictionary_2_t14A82D8EE895A25F44AC7AA14CC61ACFFAB8DC95* ___m_MeshFilterCache_69;
 	// System.Collections.IEnumerator UnityEngine.XR.Interaction.Toolkit.XRSocketInteractor::m_UpdateCollidersAfterTriggerStay
-	RuntimeObject* ___m_UpdateCollidersAfterTriggerStay_61;
+	RuntimeObject* ___m_UpdateCollidersAfterTriggerStay_72;
 };
 
 struct XRSocketInteractor_t955B5778E5057E61463018DC1817B84363C54591_StaticFields
 {
 	// System.Collections.Generic.List`1<UnityEngine.MeshFilter> UnityEngine.XR.Interaction.Toolkit.XRSocketInteractor::s_MeshFilters
-	List_1_tF38D1A45CF65189578ADAC12AED34802EB2B8930* ___s_MeshFilters_59;
+	List_1_tF38D1A45CF65189578ADAC12AED34802EB2B8930* ___s_MeshFilters_70;
 	// UnityEngine.WaitForFixedUpdate UnityEngine.XR.Interaction.Toolkit.XRSocketInteractor::s_WaitForFixedUpdate
-	WaitForFixedUpdate_t86F5BC0B6A668AEF2903DE9ADB52062E457BD1B7* ___s_WaitForFixedUpdate_60;
+	WaitForFixedUpdate_t86F5BC0B6A668AEF2903DE9ADB52062E457BD1B7* ___s_WaitForFixedUpdate_71;
 };
 
 // UnityEngine.XR.Interaction.Toolkit.XRRayInteractor
 struct XRRayInteractor_t0B25C1D5A938B199A71908E189AB351B43DA4C76  : public XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E
 {
 	// UnityEngine.XR.Interaction.Toolkit.XRRayInteractor/LineType UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_LineType
-	int32_t ___m_LineType_98;
+	int32_t ___m_LineType_109;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_BlendVisualLinePoints
-	bool ___m_BlendVisualLinePoints_99;
+	bool ___m_BlendVisualLinePoints_110;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_MaxRaycastDistance
-	float ___m_MaxRaycastDistance_100;
+	float ___m_MaxRaycastDistance_111;
 	// UnityEngine.Transform UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_RayOriginTransform
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___m_RayOriginTransform_101;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___m_RayOriginTransform_112;
 	// UnityEngine.Transform UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_ReferenceFrame
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___m_ReferenceFrame_102;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___m_ReferenceFrame_113;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_Velocity
-	float ___m_Velocity_103;
+	float ___m_Velocity_114;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_Acceleration
-	float ___m_Acceleration_104;
+	float ___m_Acceleration_115;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_AdditionalGroundHeight
-	float ___m_AdditionalGroundHeight_105;
+	float ___m_AdditionalGroundHeight_116;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_AdditionalFlightTime
-	float ___m_AdditionalFlightTime_106;
+	float ___m_AdditionalFlightTime_117;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_EndPointDistance
-	float ___m_EndPointDistance_107;
+	float ___m_EndPointDistance_118;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_EndPointHeight
-	float ___m_EndPointHeight_108;
+	float ___m_EndPointHeight_119;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_ControlPointDistance
-	float ___m_ControlPointDistance_109;
+	float ___m_ControlPointDistance_120;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_ControlPointHeight
-	float ___m_ControlPointHeight_110;
+	float ___m_ControlPointHeight_121;
 	// System.Int32 UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_SampleFrequency
-	int32_t ___m_SampleFrequency_111;
+	int32_t ___m_SampleFrequency_122;
 	// UnityEngine.XR.Interaction.Toolkit.XRRayInteractor/HitDetectionType UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_HitDetectionType
-	int32_t ___m_HitDetectionType_112;
+	int32_t ___m_HitDetectionType_123;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_SphereCastRadius
-	float ___m_SphereCastRadius_113;
+	float ___m_SphereCastRadius_124;
 	// UnityEngine.LayerMask UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_RaycastMask
-	LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB ___m_RaycastMask_114;
+	LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB ___m_RaycastMask_125;
 	// UnityEngine.QueryTriggerInteraction UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_RaycastTriggerInteraction
-	int32_t ___m_RaycastTriggerInteraction_115;
+	int32_t ___m_RaycastTriggerInteraction_126;
 	// UnityEngine.XR.Interaction.Toolkit.XRRayInteractor/QuerySnapVolumeInteraction UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_RaycastSnapVolumeInteraction
-	int32_t ___m_RaycastSnapVolumeInteraction_116;
+	int32_t ___m_RaycastSnapVolumeInteraction_127;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_HitClosestOnly
-	bool ___m_HitClosestOnly_117;
+	bool ___m_HitClosestOnly_128;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_HoverToSelect
-	bool ___m_HoverToSelect_118;
+	bool ___m_HoverToSelect_129;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_HoverTimeToSelect
-	float ___m_HoverTimeToSelect_119;
+	float ___m_HoverTimeToSelect_130;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_AutoDeselect
-	bool ___m_AutoDeselect_120;
+	bool ___m_AutoDeselect_131;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_TimeToAutoDeselect
-	float ___m_TimeToAutoDeselect_121;
+	float ___m_TimeToAutoDeselect_132;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_EnableUIInteraction
-	bool ___m_EnableUIInteraction_122;
+	bool ___m_EnableUIInteraction_133;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_AllowAnchorControl
-	bool ___m_AllowAnchorControl_123;
+	bool ___m_AllowAnchorControl_134;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_UseForceGrab
-	bool ___m_UseForceGrab_124;
+	bool ___m_UseForceGrab_135;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_RotateSpeed
-	float ___m_RotateSpeed_125;
+	float ___m_RotateSpeed_136;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_TranslateSpeed
-	float ___m_TranslateSpeed_126;
+	float ___m_TranslateSpeed_137;
 	// UnityEngine.Transform UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_AnchorRotateReferenceFrame
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___m_AnchorRotateReferenceFrame_127;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___m_AnchorRotateReferenceFrame_138;
 	// UnityEngine.XR.Interaction.Toolkit.XRRayInteractor/AnchorRotationMode UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_AnchorRotationMode
-	int32_t ___m_AnchorRotationMode_128;
+	int32_t ___m_AnchorRotationMode_139;
 	// UnityEngine.XR.Interaction.Toolkit.IXRInteractable UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::<currentNearestValidTarget>k__BackingField
-	RuntimeObject* ___U3CcurrentNearestValidTargetU3Ek__BackingField_129;
+	RuntimeObject* ___U3CcurrentNearestValidTargetU3Ek__BackingField_140;
 	// System.Collections.Generic.List`1<UnityEngine.XR.Interaction.Toolkit.IXRInteractable> UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_ValidTargets
-	List_1_t3B3CED900C4A273E3B63AAB5493C4D6D4B112810* ___m_ValidTargets_130;
+	List_1_t3B3CED900C4A273E3B63AAB5493C4D6D4B112810* ___m_ValidTargets_141;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_LastTimeHoveredObjectChanged
-	float ___m_LastTimeHoveredObjectChanged_131;
+	float ___m_LastTimeHoveredObjectChanged_142;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_PassedHoverTimeToSelect
-	bool ___m_PassedHoverTimeToSelect_132;
+	bool ___m_PassedHoverTimeToSelect_143;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_LastTimeAutoSelected
-	float ___m_LastTimeAutoSelected_133;
+	float ___m_LastTimeAutoSelected_144;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_PassedTimeToAutoDeselect
-	bool ___m_PassedTimeToAutoDeselect_134;
+	bool ___m_PassedTimeToAutoDeselect_145;
 	// UnityEngine.RaycastHit[] UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_RaycastHits
-	RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* ___m_RaycastHits_135;
+	RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* ___m_RaycastHits_146;
 	// System.Int32 UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_RaycastHitsCount
-	int32_t ___m_RaycastHitsCount_136;
+	int32_t ___m_RaycastHitsCount_147;
 	// UnityEngine.XR.Interaction.Toolkit.XRRayInteractor/RaycastHitComparer UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_RaycastHitComparer
-	RaycastHitComparer_tC59C36D577B7426F5EE8E3AE65B988F953757E9D* ___m_RaycastHitComparer_137;
+	RaycastHitComparer_tC59C36D577B7426F5EE8E3AE65B988F953757E9D* ___m_RaycastHitComparer_148;
 	// System.Collections.Generic.List`1<UnityEngine.XR.Interaction.Toolkit.XRRayInteractor/SamplePoint> UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_SamplePoints
-	List_1_tC0F6311D5ACC55EC4184D225E50673DBDAC555BD* ___m_SamplePoints_138;
+	List_1_tC0F6311D5ACC55EC4184D225E50673DBDAC555BD* ___m_SamplePoints_149;
 	// System.Int32 UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_SamplePointsFrameUpdated
-	int32_t ___m_SamplePointsFrameUpdated_139;
+	int32_t ___m_SamplePointsFrameUpdated_150;
 	// System.Int32 UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_RaycastHitEndpointIndex
-	int32_t ___m_RaycastHitEndpointIndex_140;
+	int32_t ___m_RaycastHitEndpointIndex_151;
 	// System.Int32 UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_UIRaycastHitEndpointIndex
-	int32_t ___m_UIRaycastHitEndpointIndex_141;
+	int32_t ___m_UIRaycastHitEndpointIndex_152;
 	// UnityEngine.Vector3[] UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_ControlPoints
-	Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* ___m_ControlPoints_142;
+	Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* ___m_ControlPoints_153;
 	// UnityEngine.Vector3[] UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_HitChordControlPoints
-	Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* ___m_HitChordControlPoints_143;
+	Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* ___m_HitChordControlPoints_154;
 	// UnityEngine.PhysicsScene UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_LocalPhysicsScene
-	PhysicsScene_t55222DD37072E8560EE054A07C0E3FE391D9D9DE ___m_LocalPhysicsScene_146;
+	PhysicsScene_t55222DD37072E8560EE054A07C0E3FE391D9D9DE ___m_LocalPhysicsScene_157;
 	// UnityEngine.XR.Interaction.Toolkit.UI.RegisteredUIInteractorCache UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::m_RegisteredUIInteractorCache
-	RegisteredUIInteractorCache_t81419313AA113B206AF3FF94CD9D3B64A09CE413* ___m_RegisteredUIInteractorCache_147;
+	RegisteredUIInteractorCache_t81419313AA113B206AF3FF94CD9D3B64A09CE413* ___m_RegisteredUIInteractorCache_158;
 };
 
 struct XRRayInteractor_t0B25C1D5A938B199A71908E189AB351B43DA4C76_StaticFields
 {
 	// System.Collections.Generic.List`1<UnityEngine.XR.Interaction.Toolkit.IXRInteractable> UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::s_Results
-	List_1_t3B3CED900C4A273E3B63AAB5493C4D6D4B112810* ___s_Results_94;
+	List_1_t3B3CED900C4A273E3B63AAB5493C4D6D4B112810* ___s_Results_105;
 	// System.Collections.Generic.List`1<UnityEngine.XR.Interaction.Toolkit.XRRayInteractor/SamplePoint> UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::s_ScratchSamplePoints
-	List_1_tC0F6311D5ACC55EC4184D225E50673DBDAC555BD* ___s_ScratchSamplePoints_144;
+	List_1_tC0F6311D5ACC55EC4184D225E50673DBDAC555BD* ___s_ScratchSamplePoints_155;
 	// UnityEngine.Vector3[] UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::s_ScratchControlPoints
-	Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* ___s_ScratchControlPoints_145;
+	Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* ___s_ScratchControlPoints_156;
 };
 
 // UnityEngine.XR.Interaction.Toolkit.XRGazeInteractor
 struct XRGazeInteractor_tA15AA6F631E1A4B234E4DA62AC3277476A817E6C  : public XRRayInteractor_t0B25C1D5A938B199A71908E189AB351B43DA4C76
 {
 	// UnityEngine.XR.Interaction.Toolkit.XRGazeInteractor/GazeAssistanceCalculation UnityEngine.XR.Interaction.Toolkit.XRGazeInteractor::m_GazeAssistanceCalculation
-	int32_t ___m_GazeAssistanceCalculation_148;
+	int32_t ___m_GazeAssistanceCalculation_159;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRGazeInteractor::m_GazeAssistanceColliderFixedSize
-	float ___m_GazeAssistanceColliderFixedSize_149;
+	float ___m_GazeAssistanceColliderFixedSize_160;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRGazeInteractor::m_GazeAssistanceColliderScale
-	float ___m_GazeAssistanceColliderScale_150;
+	float ___m_GazeAssistanceColliderScale_161;
 	// UnityEngine.XR.Interaction.Toolkit.XRInteractableSnapVolume UnityEngine.XR.Interaction.Toolkit.XRGazeInteractor::m_GazeAssistanceSnapVolume
-	XRInteractableSnapVolume_tD614E0736458EA1101162BA07F94960E19F18E25* ___m_GazeAssistanceSnapVolume_151;
+	XRInteractableSnapVolume_tD614E0736458EA1101162BA07F94960E19F18E25* ___m_GazeAssistanceSnapVolume_162;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRGazeInteractor::m_GazeAssistanceDistanceScaling
-	bool ___m_GazeAssistanceDistanceScaling_152;
+	bool ___m_GazeAssistanceDistanceScaling_163;
 	// System.Boolean UnityEngine.XR.Interaction.Toolkit.XRGazeInteractor::m_ClampGazeAssistanceDistanceScaling
-	bool ___m_ClampGazeAssistanceDistanceScaling_153;
+	bool ___m_ClampGazeAssistanceDistanceScaling_164;
 	// System.Single UnityEngine.XR.Interaction.Toolkit.XRGazeInteractor::m_GazeAssistanceDistanceScalingClampValue
-	float ___m_GazeAssistanceDistanceScalingClampValue_154;
+	float ___m_GazeAssistanceDistanceScalingClampValue_165;
 };
 #ifdef __clang__
 #pragma clang diagnostic pop
@@ -6354,8 +6387,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseController_set_modelParent_m5CA5FB
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, const RuntimeMethod* method) ;
 // System.Boolean UnityEngine.XR.InputDevice::get_isValid()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool InputDevice_get_isValid_mA908CF8195CECA44FF457430AFF9198C3FEC0948 (InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD* __this, const RuntimeMethod* method) ;
-// UnityEngine.XR.XRNode UnityEngine.XR.Interaction.Toolkit.XRController::get_controllerNode()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t XRController_get_controllerNode_m84357B5F8DB7E0E61C12C8E89BC0F8CEBE1B0ED4_inline (XRController_t928E104C899E51FDE12C0A8AC68874587C46C28F* __this, const RuntimeMethod* method) ;
 // UnityEngine.XR.InputDevice UnityEngine.XR.InputDevices::GetDeviceAtXRNode(UnityEngine.XR.XRNode)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD InputDevices_GetDeviceAtXRNode_mAF2A33F6C6CDCCF7736B9845E05302BDCE1D68D5 (int32_t ___node0, const RuntimeMethod* method) ;
 // UnityEngine.XR.InputDevice UnityEngine.XR.Interaction.Toolkit.XRController::get_inputDevice()
@@ -7761,6 +7792,8 @@ inline XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* Component_Get
 }
 // UnityEngine.XR.Interaction.Toolkit.SelectEnterEvent UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor::get_selectEntered()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR SelectEnterEvent_tBA2614C8C25D8794D5804C4F66195D74E64FC5D0* XRBaseInteractor_get_selectEntered_m49681B23359BF5E9E0C3F69040D0C1567A528EC3_inline (XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.XR.Interaction.Toolkit.XRInteractorReticleVisual::FindXROrigin()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRInteractorReticleVisual_FindXROrigin_m6CDB19FC729E98C0FFC335819C1A168DD22935CE (XRInteractorReticleVisual_t17EB63B209272B9D6C1A1484D1FC62D1155AE7EE* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.XR.Interaction.Toolkit.XRInteractorReticleVisual::set_reticleActive(System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRInteractorReticleVisual_set_reticleActive_m9AEE679F93F9047FAFA1636B67A6B440F9540120 (XRInteractorReticleVisual_t17EB63B209272B9D6C1A1484D1FC62D1155AE7EE* __this, bool ___value0, const RuntimeMethod* method) ;
 // System.Boolean UnityEngine.XR.Interaction.Toolkit.XRInteractorReticleVisual::UpdateReticleTarget()
@@ -7790,6 +7823,8 @@ inline RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 Nullable_1_get_Va
 {
 	return ((  RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 (*) (Nullable_1_t0344856814F10DA4D2BF15C9E0134D43CB1BA382*, const RuntimeMethod*))Nullable_1_get_Value_m6E3863F5524965D958A4C12123A3F5B12CC9E476_gshared)(__this, method);
 }
+// UnityEngine.Transform UnityEngine.XR.Interaction.Toolkit.XRRayInteractor::get_rayOriginTransform()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* XRRayInteractor_get_rayOriginTransform_m1E25B9D203ABF076A179802DC530B2A3137232F2_inline (XRRayInteractor_t0B25C1D5A938B199A71908E189AB351B43DA4C76* __this, const RuntimeMethod* method) ;
 // System.Boolean System.Nullable`1<UnityEngine.RaycastHit>::get_HasValue()
 inline bool Nullable_1_get_HasValue_mAF95CFFAB0893131FB83C35A9B8CB981D1F6D565_inline (Nullable_1_t3F600B8542A47470EF0DD5F72E42A0A3878DD326* __this, const RuntimeMethod* method)
 {
@@ -7808,8 +7843,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRInteractorReticleVisual_TryGetRaycastP
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_SmoothDamp_m017722BD53BAE32893C2A1B674746E340D4A5B89_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___current0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___target1, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___currentVelocity2, float ___smoothTime3, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 UnityEngine.Vector3::get_up()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_up_mAB5269BFCBCB1BD241450C9BF2F156303D30E0C3_inline (const RuntimeMethod* method) ;
-// UnityEngine.Quaternion UnityEngine.Quaternion::FromToRotation(UnityEngine.Vector3,UnityEngine.Vector3)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_FromToRotation_m041093DBB23CB3641118310881D6B7746E3B8418 (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___fromDirection0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___toDirection1, const RuntimeMethod* method) ;
+// UnityEngine.Vector3 UnityEngine.Transform::get_up()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Transform_get_up_mE47A9D9D96422224DD0539AA5524DA5440145BB2 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
+// System.Boolean UnityEngine.Mathf::Approximately(System.Single,System.Single)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Mathf_Approximately_m1C8DD0BB6A2D22A7DCF09AD7F8EE9ABD12D3F620_inline (float ___a0, float ___b1, const RuntimeMethod* method) ;
+// UnityEngine.Vector3 UnityEngine.Vector3::ProjectOnPlane(UnityEngine.Vector3,UnityEngine.Vector3)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_ProjectOnPlane_mCAFA9F9416EA4740DCA8757B6E52260BF536770A_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___vector0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___planeNormal1, const RuntimeMethod* method) ;
+// System.Boolean UnityEngine.Vector3::op_Inequality(UnityEngine.Vector3,UnityEngine.Vector3)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Inequality_m6A7FB1C9E9DE194708997BFA24C6E238D92D908E_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___lhs0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___rhs1, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 UnityEngine.Vector3::get_normalized()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.XR.Interaction.Toolkit.XRBaseController::set_hideControllerModel(System.Boolean)
@@ -8051,6 +8092,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Repeat_m1ACDE7EF466FB
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Magnitude_m6AD0BEBF88AAF98188A851E62D7A32CB5B7830EF_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___vector0, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 UnityEngine.Vector3::SmoothDamp(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3&,System.Single,System.Single,System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_SmoothDamp_mA20AB2E3DFAE680D742E9A17D969AF8A3E849711 (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___current0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___target1, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___currentVelocity2, float ___smoothTime3, float ___maxSpeed4, float ___deltaTime5, const RuntimeMethod* method) ;
+// System.Boolean UnityEngine.Vector3::op_Equality(UnityEngine.Vector3,UnityEngine.Vector3)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Equality_m15951D1B53E3BE36C9D265E229090020FBD72EBB_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___lhs0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___rhs1, const RuntimeMethod* method) ;
 // System.Void Unity.Profiling.LowLevel.Unsafe.ProfilerUnsafeUtility::BeginSample(System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProfilerUnsafeUtility_BeginSample_m1C6D6ED1C8E0CB2FD0934EB6EA333276F67C14F6 (intptr_t ___markerPtr0, const RuntimeMethod* method) ;
 #ifdef __clang__
@@ -10651,7 +10694,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XRController_get_selectUsage_mC9C45D9
 {
 	{
 		// get => m_SelectUsage;
-		int32_t L_0 = __this->___m_SelectUsage_25;
+		int32_t L_0 = __this->___m_SelectUsage_26;
 		return L_0;
 	}
 }
@@ -10661,7 +10704,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRController_set_selectUsage_m233DAAF98F
 	{
 		// set => m_SelectUsage = value;
 		int32_t L_0 = ___value0;
-		__this->___m_SelectUsage_25 = L_0;
+		__this->___m_SelectUsage_26 = L_0;
 		return;
 	}
 }
@@ -10670,7 +10713,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XRController_get_activateUsage_m8937E
 {
 	{
 		// get => m_ActivateUsage;
-		int32_t L_0 = __this->___m_ActivateUsage_26;
+		int32_t L_0 = __this->___m_ActivateUsage_27;
 		return L_0;
 	}
 }
@@ -10680,7 +10723,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRController_set_activateUsage_mEE163A31
 	{
 		// set => m_ActivateUsage = value;
 		int32_t L_0 = ___value0;
-		__this->___m_ActivateUsage_26 = L_0;
+		__this->___m_ActivateUsage_27 = L_0;
 		return;
 	}
 }
@@ -10689,7 +10732,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XRController_get_uiPressUsage_m20022F
 {
 	{
 		// get => m_UIPressUsage;
-		int32_t L_0 = __this->___m_UIPressUsage_27;
+		int32_t L_0 = __this->___m_UIPressUsage_28;
 		return L_0;
 	}
 }
@@ -10699,7 +10742,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRController_set_uiPressUsage_m949C86B99
 	{
 		// set => m_UIPressUsage = value;
 		int32_t L_0 = ___value0;
-		__this->___m_UIPressUsage_27 = L_0;
+		__this->___m_UIPressUsage_28 = L_0;
 		return;
 	}
 }
@@ -10708,7 +10751,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float XRController_get_axisToPressThreshold_m
 {
 	{
 		// get => m_AxisToPressThreshold;
-		float L_0 = __this->___m_AxisToPressThreshold_28;
+		float L_0 = __this->___m_AxisToPressThreshold_29;
 		return L_0;
 	}
 }
@@ -10718,7 +10761,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRController_set_axisToPressThreshold_m8
 	{
 		// set => m_AxisToPressThreshold = value;
 		float L_0 = ___value0;
-		__this->___m_AxisToPressThreshold_28 = L_0;
+		__this->___m_AxisToPressThreshold_29 = L_0;
 		return;
 	}
 }
@@ -10727,7 +10770,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XRController_get_rotateObjectLeft_m44
 {
 	{
 		// get => m_RotateAnchorLeft;
-		int32_t L_0 = __this->___m_RotateAnchorLeft_29;
+		int32_t L_0 = __this->___m_RotateAnchorLeft_30;
 		return L_0;
 	}
 }
@@ -10737,7 +10780,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRController_set_rotateObjectLeft_m7A196
 	{
 		// set => m_RotateAnchorLeft = value;
 		int32_t L_0 = ___value0;
-		__this->___m_RotateAnchorLeft_29 = L_0;
+		__this->___m_RotateAnchorLeft_30 = L_0;
 		return;
 	}
 }
@@ -10746,7 +10789,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XRController_get_rotateObjectRight_mE
 {
 	{
 		// get => m_RotateAnchorRight;
-		int32_t L_0 = __this->___m_RotateAnchorRight_30;
+		int32_t L_0 = __this->___m_RotateAnchorRight_31;
 		return L_0;
 	}
 }
@@ -10756,7 +10799,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRController_set_rotateObjectRight_mE04D
 	{
 		// set => m_RotateAnchorRight = value;
 		int32_t L_0 = ___value0;
-		__this->___m_RotateAnchorRight_30 = L_0;
+		__this->___m_RotateAnchorRight_31 = L_0;
 		return;
 	}
 }
@@ -10765,7 +10808,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XRController_get_moveObjectIn_mE1BC59
 {
 	{
 		// get => m_MoveObjectIn;
-		int32_t L_0 = __this->___m_MoveObjectIn_31;
+		int32_t L_0 = __this->___m_MoveObjectIn_32;
 		return L_0;
 	}
 }
@@ -10775,7 +10818,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRController_set_moveObjectIn_m81CCDBB1F
 	{
 		// set => m_MoveObjectIn = value;
 		int32_t L_0 = ___value0;
-		__this->___m_MoveObjectIn_31 = L_0;
+		__this->___m_MoveObjectIn_32 = L_0;
 		return;
 	}
 }
@@ -10784,7 +10827,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XRController_get_moveObjectOut_m5B470
 {
 	{
 		// get => m_MoveObjectOut;
-		int32_t L_0 = __this->___m_MoveObjectOut_32;
+		int32_t L_0 = __this->___m_MoveObjectOut_33;
 		return L_0;
 	}
 }
@@ -10794,7 +10837,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRController_set_moveObjectOut_m7C4D0952
 	{
 		// set => m_MoveObjectOut = value;
 		int32_t L_0 = ___value0;
-		__this->___m_MoveObjectOut_32 = L_0;
+		__this->___m_MoveObjectOut_33 = L_0;
 		return;
 	}
 }
@@ -10803,7 +10846,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XRController_get_directionalAnchorRot
 {
 	{
 		// get => m_DirectionalAnchorRotation;
-		int32_t L_0 = __this->___m_DirectionalAnchorRotation_33;
+		int32_t L_0 = __this->___m_DirectionalAnchorRotation_34;
 		return L_0;
 	}
 }
@@ -10813,7 +10856,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRController_set_directionalAnchorRotati
 	{
 		// set => m_DirectionalAnchorRotation = value;
 		int32_t L_0 = ___value0;
-		__this->___m_DirectionalAnchorRotation_33 = L_0;
+		__this->___m_DirectionalAnchorRotation_34 = L_0;
 		return;
 	}
 }
@@ -10822,7 +10865,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR BasePoseProvider_t55E2883DF2C8052200284D64B68
 {
 	{
 		// get => m_PoseProvider;
-		BasePoseProvider_t55E2883DF2C8052200284D64B68471636876FA1D* L_0 = __this->___m_PoseProvider_34;
+		BasePoseProvider_t55E2883DF2C8052200284D64B68471636876FA1D* L_0 = __this->___m_PoseProvider_35;
 		return L_0;
 	}
 }
@@ -10832,42 +10875,50 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRController_set_poseProvider_mC33BCBD24
 	{
 		// set => m_PoseProvider = value;
 		BasePoseProvider_t55E2883DF2C8052200284D64B68471636876FA1D* L_0 = ___value0;
-		__this->___m_PoseProvider_34 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_PoseProvider_34), (void*)L_0);
+		__this->___m_PoseProvider_35 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_PoseProvider_35), (void*)L_0);
 		return;
 	}
 }
 // UnityEngine.XR.InputDevice UnityEngine.XR.Interaction.Toolkit.XRController::get_inputDevice()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD XRController_get_inputDevice_m584AA43BBBC4CD0FAD047217DDB64DCD35281389 (XRController_t928E104C899E51FDE12C0A8AC68874587C46C28F* __this, const RuntimeMethod* method) 
 {
-	InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD V_0;
-	memset((&V_0), 0, sizeof(V_0));
 	{
-		// public InputDevice inputDevice => m_InputDevice.isValid ? m_InputDevice : m_InputDevice = InputDevices.GetDeviceAtXRNode(controllerNode);
-		InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD* L_0 = (&__this->___m_InputDevice_35);
-		bool L_1;
-		L_1 = InputDevice_get_isValid_mA908CF8195CECA44FF457430AFF9198C3FEC0948(L_0, NULL);
-		if (L_1)
+		// if (m_InputDeviceControllerNode != m_ControllerNode || !m_InputDevice.isValid)
+		int32_t L_0 = __this->___m_InputDeviceControllerNode_25;
+		int32_t L_1 = __this->___m_ControllerNode_24;
+		if ((!(((uint32_t)L_0) == ((uint32_t)L_1))))
 		{
-			goto IL_0022;
+			goto IL_001b;
 		}
 	}
 	{
-		int32_t L_2;
-		L_2 = XRController_get_controllerNode_m84357B5F8DB7E0E61C12C8E89BC0F8CEBE1B0ED4_inline(__this, NULL);
-		InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD L_3;
-		L_3 = InputDevices_GetDeviceAtXRNode_mAF2A33F6C6CDCCF7736B9845E05302BDCE1D68D5(L_2, NULL);
-		InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD L_4 = L_3;
-		V_0 = L_4;
-		__this->___m_InputDevice_35 = L_4;
-		InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD L_5 = V_0;
-		return L_5;
+		InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD* L_2 = (&__this->___m_InputDevice_36);
+		bool L_3;
+		L_3 = InputDevice_get_isValid_mA908CF8195CECA44FF457430AFF9198C3FEC0948(L_2, NULL);
+		if (L_3)
+		{
+			goto IL_0038;
+		}
 	}
 
-IL_0022:
+IL_001b:
 	{
-		InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD L_6 = __this->___m_InputDevice_35;
-		return L_6;
+		// m_InputDevice = InputDevices.GetDeviceAtXRNode(m_ControllerNode);
+		int32_t L_4 = __this->___m_ControllerNode_24;
+		InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD L_5;
+		L_5 = InputDevices_GetDeviceAtXRNode_mAF2A33F6C6CDCCF7736B9845E05302BDCE1D68D5(L_4, NULL);
+		__this->___m_InputDevice_36 = L_5;
+		// m_InputDeviceControllerNode = m_ControllerNode;
+		int32_t L_6 = __this->___m_ControllerNode_24;
+		__this->___m_InputDeviceControllerNode_25 = L_6;
+	}
+
+IL_0038:
+	{
+		// return m_InputDevice;
+		InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD L_7 = __this->___m_InputDevice_36;
+		return L_7;
 	}
 }
 // System.Void UnityEngine.XR.Interaction.Toolkit.XRController::UpdateTrackingInput(UnityEngine.XR.Interaction.Toolkit.XRControllerState)
@@ -10914,7 +10965,7 @@ IL_000b:
 		NullCheck(L_2);
 		L_2->___inputTrackingState_1 = 0;
 		// if (m_PoseProvider != null)
-		BasePoseProvider_t55E2883DF2C8052200284D64B68471636876FA1D* L_3 = __this->___m_PoseProvider_34;
+		BasePoseProvider_t55E2883DF2C8052200284D64B68471636876FA1D* L_3 = __this->___m_PoseProvider_35;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
 		L_4 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_3, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -10925,7 +10976,7 @@ IL_000b:
 	}
 	{
 		// var retFlags = m_PoseProvider.GetPoseFromProvider(out var poseProviderPose);
-		BasePoseProvider_t55E2883DF2C8052200284D64B68471636876FA1D* L_5 = __this->___m_PoseProvider_34;
+		BasePoseProvider_t55E2883DF2C8052200284D64B68471636876FA1D* L_5 = __this->___m_PoseProvider_35;
 		NullCheck(L_5);
 		int32_t L_6;
 		L_6 = VirtualFuncInvoker1< int32_t, Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971* >::Invoke(4 /* UnityEngine.SpatialTracking.PoseDataFlags UnityEngine.Experimental.XR.Interaction.BasePoseProvider::GetPoseFromProvider(UnityEngine.Pose&) */, L_5, (&V_0));
@@ -11096,10 +11147,10 @@ IL_000b:
 		XRControllerState_tC34C40CB942A51408D8799940A87A6AD87218B50* L_3 = ___controllerState0;
 		NullCheck(L_3);
 		InteractionState_tA1AFAB17758E43BA3F654BEAD6A61A05992003AB* L_4 = (&L_3->___selectInteractionState_4);
-		int32_t L_5 = __this->___m_SelectUsage_25;
+		int32_t L_5 = __this->___m_SelectUsage_26;
 		bool L_6;
 		L_6 = VirtualFuncInvoker1< bool, int32_t >::Invoke(18 /* System.Boolean UnityEngine.XR.Interaction.Toolkit.XRController::IsPressed(UnityEngine.XR.Interaction.Toolkit.InputHelpers/Button) */, __this, L_5);
-		int32_t L_7 = __this->___m_SelectUsage_25;
+		int32_t L_7 = __this->___m_SelectUsage_26;
 		float L_8;
 		L_8 = VirtualFuncInvoker1< float, int32_t >::Invoke(19 /* System.Single UnityEngine.XR.Interaction.Toolkit.XRController::ReadValue(UnityEngine.XR.Interaction.Toolkit.InputHelpers/Button) */, __this, L_7);
 		InteractionState_SetFrameState_mFD251DE03E6724F0D133CC5D16543BC560D54674(L_4, L_6, L_8, NULL);
@@ -11107,10 +11158,10 @@ IL_000b:
 		XRControllerState_tC34C40CB942A51408D8799940A87A6AD87218B50* L_9 = ___controllerState0;
 		NullCheck(L_9);
 		InteractionState_tA1AFAB17758E43BA3F654BEAD6A61A05992003AB* L_10 = (&L_9->___activateInteractionState_5);
-		int32_t L_11 = __this->___m_ActivateUsage_26;
+		int32_t L_11 = __this->___m_ActivateUsage_27;
 		bool L_12;
 		L_12 = VirtualFuncInvoker1< bool, int32_t >::Invoke(18 /* System.Boolean UnityEngine.XR.Interaction.Toolkit.XRController::IsPressed(UnityEngine.XR.Interaction.Toolkit.InputHelpers/Button) */, __this, L_11);
-		int32_t L_13 = __this->___m_ActivateUsage_26;
+		int32_t L_13 = __this->___m_ActivateUsage_27;
 		float L_14;
 		L_14 = VirtualFuncInvoker1< float, int32_t >::Invoke(19 /* System.Single UnityEngine.XR.Interaction.Toolkit.XRController::ReadValue(UnityEngine.XR.Interaction.Toolkit.InputHelpers/Button) */, __this, L_13);
 		InteractionState_SetFrameState_mFD251DE03E6724F0D133CC5D16543BC560D54674(L_10, L_12, L_14, NULL);
@@ -11118,10 +11169,10 @@ IL_000b:
 		XRControllerState_tC34C40CB942A51408D8799940A87A6AD87218B50* L_15 = ___controllerState0;
 		NullCheck(L_15);
 		InteractionState_tA1AFAB17758E43BA3F654BEAD6A61A05992003AB* L_16 = (&L_15->___uiPressInteractionState_6);
-		int32_t L_17 = __this->___m_UIPressUsage_27;
+		int32_t L_17 = __this->___m_UIPressUsage_28;
 		bool L_18;
 		L_18 = VirtualFuncInvoker1< bool, int32_t >::Invoke(18 /* System.Boolean UnityEngine.XR.Interaction.Toolkit.XRController::IsPressed(UnityEngine.XR.Interaction.Toolkit.InputHelpers/Button) */, __this, L_17);
-		int32_t L_19 = __this->___m_UIPressUsage_27;
+		int32_t L_19 = __this->___m_UIPressUsage_28;
 		float L_20;
 		L_20 = VirtualFuncInvoker1< float, int32_t >::Invoke(19 /* System.Single UnityEngine.XR.Interaction.Toolkit.XRController::ReadValue(UnityEngine.XR.Interaction.Toolkit.InputHelpers/Button) */, __this, L_19);
 		InteractionState_SetFrameState_mFD251DE03E6724F0D133CC5D16543BC560D54674(L_16, L_18, L_20, NULL);
@@ -11144,7 +11195,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRController_IsPressed_mB6EFB2C76C05ABE3
 		InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD L_0;
 		L_0 = XRController_get_inputDevice_m584AA43BBBC4CD0FAD047217DDB64DCD35281389(__this, NULL);
 		int32_t L_1 = ___button0;
-		float L_2 = __this->___m_AxisToPressThreshold_28;
+		float L_2 = __this->___m_AxisToPressThreshold_29;
 		il2cpp_codegen_runtime_class_init_inline(InputHelpers_t6F6BABB51A0BA00202F7D2720513930CFF10810F_il2cpp_TypeInfo_var);
 		bool L_3;
 		L_3 = InputHelpers_IsPressed_mD0516F35AE1B3765A098C89EDBC1E5F1E68144E2(L_0, L_1, (&V_0), L_2, NULL);
@@ -11229,23 +11280,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRController__ctor_mFD260BA76E7F67E04FD4
 		// XRNode m_ControllerNode = XRNode.RightHand;
 		__this->___m_ControllerNode_24 = 5;
 		// InputHelpers.Button m_SelectUsage = InputHelpers.Button.Grip;
-		__this->___m_SelectUsage_25 = 3;
+		__this->___m_SelectUsage_26 = 3;
 		// InputHelpers.Button m_ActivateUsage = InputHelpers.Button.Trigger;
-		__this->___m_ActivateUsage_26 = 2;
+		__this->___m_ActivateUsage_27 = 2;
 		// InputHelpers.Button m_UIPressUsage = InputHelpers.Button.Trigger;
-		__this->___m_UIPressUsage_27 = 2;
+		__this->___m_UIPressUsage_28 = 2;
 		// float m_AxisToPressThreshold = 0.1f;
-		__this->___m_AxisToPressThreshold_28 = (0.100000001f);
+		__this->___m_AxisToPressThreshold_29 = (0.100000001f);
 		// InputHelpers.Button m_RotateAnchorLeft = InputHelpers.Button.PrimaryAxis2DLeft;
-		__this->___m_RotateAnchorLeft_29 = ((int32_t)16);
+		__this->___m_RotateAnchorLeft_30 = ((int32_t)16);
 		// InputHelpers.Button m_RotateAnchorRight = InputHelpers.Button.PrimaryAxis2DRight;
-		__this->___m_RotateAnchorRight_30 = ((int32_t)17);
+		__this->___m_RotateAnchorRight_31 = ((int32_t)17);
 		// InputHelpers.Button m_MoveObjectIn = InputHelpers.Button.PrimaryAxis2DUp;
-		__this->___m_MoveObjectIn_31 = ((int32_t)14);
+		__this->___m_MoveObjectIn_32 = ((int32_t)14);
 		// InputHelpers.Button m_MoveObjectOut = InputHelpers.Button.PrimaryAxis2DDown;
-		__this->___m_MoveObjectOut_32 = ((int32_t)15);
+		__this->___m_MoveObjectOut_33 = ((int32_t)15);
 		// InputHelpers.Axis2D m_DirectionalAnchorRotation = InputHelpers.Axis2D.PrimaryAxis2D;
-		__this->___m_DirectionalAnchorRotation_33 = 1;
+		__this->___m_DirectionalAnchorRotation_34 = 1;
 		XRBaseController__ctor_mAB469A8A2B478CC37F1BA0BEE00D7ED28C1CAA30(__this, NULL);
 		return;
 	}
@@ -30494,7 +30545,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRInteractorReticleVisual_set_reticleAct
 		bool L_0 = ___value0;
 		__this->___m_ReticleActive_14 = L_0;
 		// if (m_ReticleInstance != null)
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___m_ReticleInstance_15;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___m_ReticleInstance_17;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_1, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -30505,7 +30556,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRInteractorReticleVisual_set_reticleAct
 	}
 	{
 		// m_ReticleInstance.SetActive(value);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___m_ReticleInstance_15;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___m_ReticleInstance_17;
 		bool L_4 = ___value0;
 		NullCheck(L_3);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_3, L_4, NULL);
@@ -30539,14 +30590,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRInteractorReticleVisual_Awake_m620E825
 		L_1 = GameObject_get_scene_m747D45E8CECC56DD47D1E103F9E51D5FBEDA4B01(L_0, NULL);
 		PhysicsScene_t55222DD37072E8560EE054A07C0E3FE391D9D9DE L_2;
 		L_2 = PhysicsSceneExtensions_GetPhysicsScene_m6DEA17E8DBC41D45BBF22D28E4FA535AA793993F(L_1, NULL);
-		__this->___m_LocalPhysicsScene_20 = L_2;
+		__this->___m_LocalPhysicsScene_22 = L_2;
 		// m_Interactor = GetComponent<XRBaseInteractor>();
 		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_3;
 		L_3 = Component_GetComponent_TisXRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158_m088F2113B7849794EAF31AF1D03D29BFDDC29316(__this, Component_GetComponent_TisXRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158_m088F2113B7849794EAF31AF1D03D29BFDDC29316_RuntimeMethod_var);
-		__this->___m_Interactor_16 = L_3;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Interactor_16), (void*)L_3);
+		__this->___m_Interactor_18 = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Interactor_18), (void*)L_3);
 		// if (m_Interactor != null)
-		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_4 = __this->___m_Interactor_16;
+		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_4 = __this->___m_Interactor_18;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
 		L_5 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_4, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -30557,7 +30608,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRInteractorReticleVisual_Awake_m620E825
 	}
 	{
 		// m_Interactor.selectEntered.AddListener(OnSelectEntered);
-		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_6 = __this->___m_Interactor_16;
+		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_6 = __this->___m_Interactor_18;
 		NullCheck(L_6);
 		SelectEnterEvent_tBA2614C8C25D8794D5804C4F66195D74E64FC5D0* L_7;
 		L_7 = XRBaseInteractor_get_selectEntered_m49681B23359BF5E9E0C3F69040D0C1567A528EC3_inline(L_6, NULL);
@@ -30570,6 +30621,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRInteractorReticleVisual_Awake_m620E825
 
 IL_004c:
 	{
+		// FindXROrigin();
+		XRInteractorReticleVisual_FindXROrigin_m6CDB19FC729E98C0FFC335819C1A168DD22935CE(__this, NULL);
 		// SetupReticlePrefab();
 		XRInteractorReticleVisual_SetupReticlePrefab_m26AA753B23AC0A8C795B7A94A73DFF24505CFCA0(__this, NULL);
 		// reticleActive = false;
@@ -30589,7 +30642,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRInteractorReticleVisual_Update_m9D4213
 	}
 	{
 		// if (m_Interactor != null && UpdateReticleTarget())
-		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_0 = __this->___m_Interactor_16;
+		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_0 = __this->___m_Interactor_18;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -30634,7 +30687,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRInteractorReticleVisual_OnDestroy_mFF1
 	}
 	{
 		// if (m_Interactor != null)
-		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_0 = __this->___m_Interactor_16;
+		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_0 = __this->___m_Interactor_18;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -30645,7 +30698,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRInteractorReticleVisual_OnDestroy_mFF1
 	}
 	{
 		// m_Interactor.selectEntered.RemoveListener(OnSelectEntered);
-		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_2 = __this->___m_Interactor_16;
+		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_2 = __this->___m_Interactor_18;
 		NullCheck(L_2);
 		SelectEnterEvent_tBA2614C8C25D8794D5804C4F66195D74E64FC5D0* L_3;
 		L_3 = XRBaseInteractor_get_selectEntered_m49681B23359BF5E9E0C3F69040D0C1567A528EC3_inline(L_2, NULL);
@@ -30662,6 +30715,64 @@ IL_002a:
 		return;
 	}
 }
+// System.Void UnityEngine.XR.Interaction.Toolkit.XRInteractorReticleVisual::FindXROrigin()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRInteractorReticleVisual_FindXROrigin_m6CDB19FC729E98C0FFC335819C1A168DD22935CE (XRInteractorReticleVisual_t17EB63B209272B9D6C1A1484D1FC62D1155AE7EE* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisXROrigin_t5E534A6D886991AF3C1C64127E19A3A510009CFE_mAB31BBA1730F8CD94057988C74010254ADABC140_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRInteractorReticleVisual_t17EB63B209272B9D6C1A1484D1FC62D1155AE7EE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// if (m_XROrigin != null)
+		XROrigin_t5E534A6D886991AF3C1C64127E19A3A510009CFE* L_0 = __this->___m_XROrigin_16;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_1)
+		{
+			goto IL_000f;
+		}
+	}
+	{
+		// return;
+		return;
+	}
+
+IL_000f:
+	{
+		// if (s_XROriginCache == null)
+		XROrigin_t5E534A6D886991AF3C1C64127E19A3A510009CFE* L_2 = ((XRInteractorReticleVisual_t17EB63B209272B9D6C1A1484D1FC62D1155AE7EE_StaticFields*)il2cpp_codegen_static_fields_for(XRInteractorReticleVisual_t17EB63B209272B9D6C1A1484D1FC62D1155AE7EE_il2cpp_TypeInfo_var))->___s_XROriginCache_15;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Object_op_Equality_mD3DB0D72CE0250C84033DC2A90AEF9D59896E536(L_2, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0026;
+		}
+	}
+	{
+		// s_XROriginCache = FindObjectOfType<XROrigin>();
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		XROrigin_t5E534A6D886991AF3C1C64127E19A3A510009CFE* L_4;
+		L_4 = Object_FindObjectOfType_TisXROrigin_t5E534A6D886991AF3C1C64127E19A3A510009CFE_mAB31BBA1730F8CD94057988C74010254ADABC140(Object_FindObjectOfType_TisXROrigin_t5E534A6D886991AF3C1C64127E19A3A510009CFE_mAB31BBA1730F8CD94057988C74010254ADABC140_RuntimeMethod_var);
+		((XRInteractorReticleVisual_t17EB63B209272B9D6C1A1484D1FC62D1155AE7EE_StaticFields*)il2cpp_codegen_static_fields_for(XRInteractorReticleVisual_t17EB63B209272B9D6C1A1484D1FC62D1155AE7EE_il2cpp_TypeInfo_var))->___s_XROriginCache_15 = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&((XRInteractorReticleVisual_t17EB63B209272B9D6C1A1484D1FC62D1155AE7EE_StaticFields*)il2cpp_codegen_static_fields_for(XRInteractorReticleVisual_t17EB63B209272B9D6C1A1484D1FC62D1155AE7EE_il2cpp_TypeInfo_var))->___s_XROriginCache_15), (void*)L_4);
+	}
+
+IL_0026:
+	{
+		// m_XROrigin = s_XROriginCache;
+		XROrigin_t5E534A6D886991AF3C1C64127E19A3A510009CFE* L_5 = ((XRInteractorReticleVisual_t17EB63B209272B9D6C1A1484D1FC62D1155AE7EE_StaticFields*)il2cpp_codegen_static_fields_for(XRInteractorReticleVisual_t17EB63B209272B9D6C1A1484D1FC62D1155AE7EE_il2cpp_TypeInfo_var))->___s_XROriginCache_15;
+		__this->___m_XROrigin_16 = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_XROrigin_16), (void*)L_5);
+		// }
+		return;
+	}
+}
 // System.Void UnityEngine.XR.Interaction.Toolkit.XRInteractorReticleVisual::SetupReticlePrefab()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRInteractorReticleVisual_SetupReticlePrefab_m26AA753B23AC0A8C795B7A94A73DFF24505CFCA0 (XRInteractorReticleVisual_t17EB63B209272B9D6C1A1484D1FC62D1155AE7EE* __this, const RuntimeMethod* method) 
 {
@@ -30674,7 +30785,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRInteractorReticleVisual_SetupReticlePr
 	}
 	{
 		// if (m_ReticleInstance != null)
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___m_ReticleInstance_15;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___m_ReticleInstance_17;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -30685,7 +30796,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRInteractorReticleVisual_SetupReticlePr
 	}
 	{
 		// Destroy(m_ReticleInstance);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___m_ReticleInstance_15;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___m_ReticleInstance_17;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mFCDAE6333522488F60597AF019EA90BB1207A5AA(L_2, NULL);
 	}
@@ -30708,8 +30819,8 @@ IL_0019:
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6;
 		L_6 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_mC898F7E3D9541F17BD8B79579FDD431C0651E12D(L_5, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_mC898F7E3D9541F17BD8B79579FDD431C0651E12D_RuntimeMethod_var);
-		__this->___m_ReticleInstance_15 = L_6;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_ReticleInstance_15), (void*)L_6);
+		__this->___m_ReticleInstance_17 = L_6;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_ReticleInstance_17), (void*)L_6);
 	}
 
 IL_0038:
@@ -30800,22 +30911,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRInteractorReticleVisual_TryGetRaycastP
 		V_0 = (bool)0;
 		// var hitCount = m_LocalPhysicsScene.Raycast(m_Interactor.attachTransform.position, m_Interactor.attachTransform.forward,
 		//     m_RaycastHits, m_MaxRaycastDistance, m_RaycastMask);
-		PhysicsScene_t55222DD37072E8560EE054A07C0E3FE391D9D9DE* L_0 = (&__this->___m_LocalPhysicsScene_20);
-		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_1 = __this->___m_Interactor_16;
+		PhysicsScene_t55222DD37072E8560EE054A07C0E3FE391D9D9DE* L_0 = (&__this->___m_LocalPhysicsScene_22);
+		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_1 = __this->___m_Interactor_18;
 		NullCheck(L_1);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
 		L_2 = XRBaseInteractor_get_attachTransform_m704C74165ED1463CF8B79670066472AE4BD33482_inline(L_1, NULL);
 		NullCheck(L_2);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3;
 		L_3 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_2, NULL);
-		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_4 = __this->___m_Interactor_16;
+		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_4 = __this->___m_Interactor_18;
 		NullCheck(L_4);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5;
 		L_5 = XRBaseInteractor_get_attachTransform_m704C74165ED1463CF8B79670066472AE4BD33482_inline(L_4, NULL);
 		NullCheck(L_5);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
 		L_6 = Transform_get_forward_mFCFACF7165FDAB21E80E384C494DF278386CEE2F(L_5, NULL);
-		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_7 = __this->___m_RaycastHits_21;
+		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_7 = __this->___m_RaycastHits_24;
 		float L_8 = __this->___m_MaxRaycastDistance_5;
 		LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB L_9 = __this->___m_RaycastMask_13;
 		int32_t L_10;
@@ -30832,7 +30943,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRInteractorReticleVisual_TryGetRaycastP
 	}
 	{
 		// var closestHit = FindClosestHit(m_RaycastHits, hitCount);
-		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_13 = __this->___m_RaycastHits_21;
+		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_13 = __this->___m_RaycastHits_24;
 		int32_t L_14 = V_1;
 		RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5 L_15;
 		L_15 = XRInteractorReticleVisual_FindClosestHit_m356DB666879D2014B1D186186BCD457E88AD9A0F(L_13, L_14, NULL);
@@ -30887,8 +30998,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRInteractorReticleVisual_UpdateReticleT
 	memset((&V_9), 0, sizeof(V_9));
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_10;
 	memset((&V_10), 0, sizeof(V_10));
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 G_B18_0;
-	memset((&G_B18_0), 0, sizeof(G_B18_0));
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 G_B20_0;
+	memset((&G_B20_0), 0, sizeof(G_B20_0));
 	{
 		// if (!m_DrawWhileSelecting && m_Interactor.hasSelection)
 		bool L_0 = __this->___m_DrawWhileSelecting_11;
@@ -30898,7 +31009,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRInteractorReticleVisual_UpdateReticleT
 		}
 	}
 	{
-		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_1 = __this->___m_Interactor_16;
+		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_1 = __this->___m_Interactor_18;
 		NullCheck(L_1);
 		bool L_2;
 		L_2 = XRBaseInteractor_get_hasSelection_mDC47E8BD0F4498E27BD041B52008C36AD09583B1(L_1, NULL);
@@ -30915,7 +31026,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRInteractorReticleVisual_UpdateReticleT
 IL_0017:
 	{
 		// if (m_Interactor.disableVisualsWhenBlockedInGroup && m_Interactor.IsBlockedByInteractionWithinGroup())
-		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_3 = __this->___m_Interactor_16;
+		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_3 = __this->___m_Interactor_18;
 		NullCheck(L_3);
 		bool L_4;
 		L_4 = XRBaseInteractor_get_disableVisualsWhenBlockedInGroup_m3D7497C19B9644556BD7D16E8928C344D90644FC_inline(L_3, NULL);
@@ -30925,7 +31036,7 @@ IL_0017:
 		}
 	}
 	{
-		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_5 = __this->___m_Interactor_16;
+		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_5 = __this->___m_Interactor_18;
 		bool L_6;
 		L_6 = XRInteractorExtensions_IsBlockedByInteractionWithinGroup_m432CC1D7B3105F0795FAECC3B4DF75D1BE61E373(L_5, NULL);
 		if (!L_6)
@@ -30951,12 +31062,12 @@ IL_0033:
 		L_8 = Vector3_get_zero_m9D7F7B580B5A276411267E96AA3425736D9BDC83_inline(NULL);
 		V_2 = L_8;
 		// if (m_Interactor is XRRayInteractor rayInteractor)
-		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_9 = __this->___m_Interactor_16;
+		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_9 = __this->___m_Interactor_18;
 		V_3 = ((XRRayInteractor_t0B25C1D5A938B199A71908E189AB351B43DA4C76*)IsInstClass((RuntimeObject*)L_9, XRRayInteractor_t0B25C1D5A938B199A71908E189AB351B43DA4C76_il2cpp_TypeInfo_var));
 		XRRayInteractor_t0B25C1D5A938B199A71908E189AB351B43DA4C76* L_10 = V_3;
 		if (!L_10)
 		{
-			goto IL_00ef;
+			goto IL_0115;
 		}
 	}
 	{
@@ -30967,7 +31078,7 @@ IL_0033:
 		L_12 = XRRayInteractor_TryGetCurrentRaycast_mF6C0E3DE22A6CF5FD8777CC2837C3F79E215E5F3(L_11, (&V_4), (&V_7), (&V_5), (&V_8), (&V_6), NULL);
 		if (!L_12)
 		{
-			goto IL_00a7;
+			goto IL_00cd;
 		}
 	}
 	{
@@ -30975,7 +31086,7 @@ IL_0033:
 		bool L_13 = V_6;
 		if (!L_13)
 		{
-			goto IL_0081;
+			goto IL_00a7;
 		}
 	}
 	{
@@ -30989,111 +31100,138 @@ IL_0033:
 		// raycastNormal = hit.worldNormal;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17 = L_15.___worldNormal_8;
 		V_2 = L_17;
-		// hasRaycastHit = true;
-		V_0 = (bool)1;
-		goto IL_00fd;
-	}
-
-IL_0081:
-	{
-		// else if (raycastHit.HasValue)
-		bool L_18;
-		L_18 = Nullable_1_get_HasValue_mAF95CFFAB0893131FB83C35A9B8CB981D1F6D565_inline((&V_4), Nullable_1_get_HasValue_mAF95CFFAB0893131FB83C35A9B8CB981D1F6D565_RuntimeMethod_var);
-		if (!L_18)
+		// var isHittingBackOfCanvas = Vector3.Dot(rayInteractor.rayOriginTransform.forward, raycastNormal) > 0.0f;
+		XRRayInteractor_t0B25C1D5A938B199A71908E189AB351B43DA4C76* L_18 = V_3;
+		NullCheck(L_18);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_19;
+		L_19 = XRRayInteractor_get_rayOriginTransform_m1E25B9D203ABF076A179802DC530B2A3137232F2_inline(L_18, NULL);
+		NullCheck(L_19);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_20;
+		L_20 = Transform_get_forward_mFCFACF7165FDAB21E80E384C494DF278386CEE2F(L_19, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_21 = V_2;
+		float L_22;
+		L_22 = Vector3_Dot_m4688A1A524306675DBDB1E6D483F35E85E3CE6D8_inline(L_20, L_21, NULL);
+		// if (isHittingBackOfCanvas)
+		if (!((((float)L_22) > ((float)(0.0f)))? 1 : 0))
 		{
-			goto IL_00fd;
+			goto IL_00a3;
 		}
 	}
 	{
-		// var hit = raycastHit.Value;
-		RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5 L_19;
-		L_19 = Nullable_1_get_Value_mB7FAA9863D5584543E4EAF943E154B93353830CC((&V_4), Nullable_1_get_Value_mB7FAA9863D5584543E4EAF943E154B93353830CC_RuntimeMethod_var);
-		V_9 = L_19;
-		// raycastPos = hit.point;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_20;
-		L_20 = RaycastHit_get_point_m02B764612562AFE0F998CC7CFB2EEDE41BA47F39((&V_9), NULL);
-		V_1 = L_20;
-		// raycastNormal = hit.normal;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_21;
-		L_21 = RaycastHit_get_normal_mD8741B70D2039C5CAFC4368D4CE59D89562040B5((&V_9), NULL);
-		V_2 = L_21;
+		// raycastNormal *= -1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_23 = V_2;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24;
+		L_24 = Vector3_op_Multiply_m516FE285F5342F922C6EB3FCB33197E9017FF484_inline(L_23, (-1.0f), NULL);
+		V_2 = L_24;
+	}
+
+IL_00a3:
+	{
 		// hasRaycastHit = true;
 		V_0 = (bool)1;
-		goto IL_00fd;
+		goto IL_0123;
 	}
 
 IL_00a7:
 	{
-		// else if (m_DrawOnNoHit && rayInteractor.GetLinePoints(ref m_InteractorLinePoints, out _))
-		bool L_22 = __this->___m_DrawOnNoHit_12;
-		if (!L_22)
+		// else if (raycastHit.HasValue)
+		bool L_25;
+		L_25 = Nullable_1_get_HasValue_mAF95CFFAB0893131FB83C35A9B8CB981D1F6D565_inline((&V_4), Nullable_1_get_HasValue_mAF95CFFAB0893131FB83C35A9B8CB981D1F6D565_RuntimeMethod_var);
+		if (!L_25)
 		{
-			goto IL_00fd;
+			goto IL_0123;
 		}
 	}
 	{
-		XRRayInteractor_t0B25C1D5A938B199A71908E189AB351B43DA4C76* L_23 = V_3;
-		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C** L_24 = (&__this->___m_InteractorLinePoints_17);
-		NullCheck(L_23);
-		bool L_25;
-		L_25 = XRRayInteractor_GetLinePoints_m0A66C8DAE1B16CC5A34788E2112AA3D5FCB2D5DA(L_23, L_24, (&V_8), NULL);
-		if (!L_25)
+		// var hit = raycastHit.Value;
+		RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5 L_26;
+		L_26 = Nullable_1_get_Value_mB7FAA9863D5584543E4EAF943E154B93353830CC((&V_4), Nullable_1_get_Value_mB7FAA9863D5584543E4EAF943E154B93353830CC_RuntimeMethod_var);
+		V_9 = L_26;
+		// raycastPos = hit.point;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_27;
+		L_27 = RaycastHit_get_point_m02B764612562AFE0F998CC7CFB2EEDE41BA47F39((&V_9), NULL);
+		V_1 = L_27;
+		// raycastNormal = hit.normal;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_28;
+		L_28 = RaycastHit_get_normal_mD8741B70D2039C5CAFC4368D4CE59D89562040B5((&V_9), NULL);
+		V_2 = L_28;
+		// hasRaycastHit = true;
+		V_0 = (bool)1;
+		goto IL_0123;
+	}
+
+IL_00cd:
+	{
+		// else if (m_DrawOnNoHit && rayInteractor.GetLinePoints(ref m_InteractorLinePoints, out _))
+		bool L_29 = __this->___m_DrawOnNoHit_12;
+		if (!L_29)
 		{
-			goto IL_00fd;
+			goto IL_0123;
+		}
+	}
+	{
+		XRRayInteractor_t0B25C1D5A938B199A71908E189AB351B43DA4C76* L_30 = V_3;
+		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C** L_31 = (&__this->___m_InteractorLinePoints_19);
+		NullCheck(L_30);
+		bool L_32;
+		L_32 = XRRayInteractor_GetLinePoints_m0A66C8DAE1B16CC5A34788E2112AA3D5FCB2D5DA(L_30, L_31, (&V_8), NULL);
+		if (!L_32)
+		{
+			goto IL_0123;
 		}
 	}
 	{
 		// raycastPos = m_InteractorLinePoints != null && m_InteractorLinePoints.Length > 0
 		//     ? m_InteractorLinePoints[m_InteractorLinePoints.Length - 1]
 		//     : Vector3.zero;
-		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_26 = __this->___m_InteractorLinePoints_17;
-		if (!L_26)
-		{
-			goto IL_00d0;
-		}
-	}
-	{
-		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_27 = __this->___m_InteractorLinePoints_17;
-		NullCheck(L_27);
-		if ((((RuntimeArray*)L_27)->max_length))
-		{
-			goto IL_00d7;
-		}
-	}
-
-IL_00d0:
-	{
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_28;
-		L_28 = Vector3_get_zero_m9D7F7B580B5A276411267E96AA3425736D9BDC83_inline(NULL);
-		G_B18_0 = L_28;
-		goto IL_00ec;
-	}
-
-IL_00d7:
-	{
-		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_29 = __this->___m_InteractorLinePoints_17;
-		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_30 = __this->___m_InteractorLinePoints_17;
-		NullCheck(L_30);
-		NullCheck(L_29);
-		int32_t L_31 = ((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_30)->max_length)), 1));
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_32 = (L_29)->GetAt(static_cast<il2cpp_array_size_t>(L_31));
-		G_B18_0 = L_32;
-	}
-
-IL_00ec:
-	{
-		V_1 = G_B18_0;
-		goto IL_00fd;
-	}
-
-IL_00ef:
-	{
-		// else if (TryGetRaycastPoint(ref raycastPos, ref raycastNormal))
-		bool L_33;
-		L_33 = XRInteractorReticleVisual_TryGetRaycastPoint_mECBDD69BC9BBC77A819B785FE2F3BC8CDDE88BD6(__this, (&V_1), (&V_2), NULL);
+		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_33 = __this->___m_InteractorLinePoints_19;
 		if (!L_33)
 		{
+			goto IL_00f6;
+		}
+	}
+	{
+		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_34 = __this->___m_InteractorLinePoints_19;
+		NullCheck(L_34);
+		if ((((RuntimeArray*)L_34)->max_length))
+		{
 			goto IL_00fd;
+		}
+	}
+
+IL_00f6:
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_35;
+		L_35 = Vector3_get_zero_m9D7F7B580B5A276411267E96AA3425736D9BDC83_inline(NULL);
+		G_B20_0 = L_35;
+		goto IL_0112;
+	}
+
+IL_00fd:
+	{
+		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_36 = __this->___m_InteractorLinePoints_19;
+		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_37 = __this->___m_InteractorLinePoints_19;
+		NullCheck(L_37);
+		NullCheck(L_36);
+		int32_t L_38 = ((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_37)->max_length)), 1));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_39 = (L_36)->GetAt(static_cast<il2cpp_array_size_t>(L_38));
+		G_B20_0 = L_39;
+	}
+
+IL_0112:
+	{
+		V_1 = G_B20_0;
+		goto IL_0123;
+	}
+
+IL_0115:
+	{
+		// else if (TryGetRaycastPoint(ref raycastPos, ref raycastNormal))
+		bool L_40;
+		L_40 = XRInteractorReticleVisual_TryGetRaycastPoint_mECBDD69BC9BBC77A819B785FE2F3BC8CDDE88BD6(__this, (&V_1), (&V_2), NULL);
+		if (!L_40)
+		{
+			goto IL_0123;
 		}
 	}
 	{
@@ -31101,48 +31239,51 @@ IL_00ef:
 		V_0 = (bool)1;
 	}
 
-IL_00fd:
+IL_0123:
 	{
+		// m_HasRaycastHit = hasRaycastHit;
+		bool L_41 = V_0;
+		__this->___m_HasRaycastHit_23 = L_41;
 		// if (hasRaycastHit || m_DrawOnNoHit)
-		bool L_34 = V_0;
-		if (L_34)
+		bool L_42 = V_0;
+		if (L_42)
 		{
-			goto IL_0108;
+			goto IL_0135;
 		}
 	}
 	{
-		bool L_35 = __this->___m_DrawOnNoHit_12;
-		if (!L_35)
+		bool L_43 = __this->___m_DrawOnNoHit_12;
+		if (!L_43)
 		{
-			goto IL_0145;
+			goto IL_0172;
 		}
 	}
 
-IL_0108:
+IL_0135:
 	{
 		// var velocity = Vector3.zero;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_36;
-		L_36 = Vector3_get_zero_m9D7F7B580B5A276411267E96AA3425736D9BDC83_inline(NULL);
-		V_10 = L_36;
-		// m_TargetEndPoint = Vector3.SmoothDamp(m_TargetEndPoint, raycastPos, ref velocity, m_EndpointSmoothingTime);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_37 = __this->___m_TargetEndPoint_18;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_38 = V_1;
-		float L_39 = __this->___m_EndpointSmoothingTime_10;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_40;
-		L_40 = Vector3_SmoothDamp_m017722BD53BAE32893C2A1B674746E340D4A5B89_inline(L_37, L_38, (&V_10), L_39, NULL);
-		__this->___m_TargetEndPoint_18 = L_40;
-		// m_TargetEndNormal = Vector3.SmoothDamp(m_TargetEndNormal, raycastNormal, ref velocity, m_EndpointSmoothingTime);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_41 = __this->___m_TargetEndNormal_19;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_42 = V_2;
-		float L_43 = __this->___m_EndpointSmoothingTime_10;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_44;
-		L_44 = Vector3_SmoothDamp_m017722BD53BAE32893C2A1B674746E340D4A5B89_inline(L_41, L_42, (&V_10), L_43, NULL);
-		__this->___m_TargetEndNormal_19 = L_44;
+		L_44 = Vector3_get_zero_m9D7F7B580B5A276411267E96AA3425736D9BDC83_inline(NULL);
+		V_10 = L_44;
+		// m_TargetEndPoint = Vector3.SmoothDamp(m_TargetEndPoint, raycastPos, ref velocity, m_EndpointSmoothingTime);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_45 = __this->___m_TargetEndPoint_20;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_46 = V_1;
+		float L_47 = __this->___m_EndpointSmoothingTime_10;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_48;
+		L_48 = Vector3_SmoothDamp_m017722BD53BAE32893C2A1B674746E340D4A5B89_inline(L_45, L_46, (&V_10), L_47, NULL);
+		__this->___m_TargetEndPoint_20 = L_48;
+		// m_TargetEndNormal = Vector3.SmoothDamp(m_TargetEndNormal, raycastNormal, ref velocity, m_EndpointSmoothingTime);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_49 = __this->___m_TargetEndNormal_21;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_50 = V_2;
+		float L_51 = __this->___m_EndpointSmoothingTime_10;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_52;
+		L_52 = Vector3_SmoothDamp_m017722BD53BAE32893C2A1B674746E340D4A5B89_inline(L_49, L_50, (&V_10), L_51, NULL);
+		__this->___m_TargetEndNormal_21 = L_52;
 		// return true;
 		return (bool)1;
 	}
 
-IL_0145:
+IL_0172:
 	{
 		// return false;
 		return (bool)0;
@@ -31157,128 +31298,247 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRInteractorReticleVisual_ActivateReticl
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	float V_0 = 0.0f;
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
-	memset((&V_1), 0, sizeof(V_1));
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	float V_1 = 0.0f;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	float V_3 = 0.0f;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_4;
+	memset((&V_4), 0, sizeof(V_4));
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_5;
+	memset((&V_5), 0, sizeof(V_5));
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 G_B5_0;
+	memset((&G_B5_0), 0, sizeof(G_B5_0));
 	{
 		// if (m_ReticleInstance != null)
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___m_ReticleInstance_15;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___m_ReticleInstance_17;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_1)
 		{
-			goto IL_00da;
+			goto IL_016e;
 		}
 	}
 	{
 		// m_ReticleInstance.transform.position = m_TargetEndPoint;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___m_ReticleInstance_15;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___m_ReticleInstance_17;
 		NullCheck(L_2);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
 		L_3 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_2, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = __this->___m_TargetEndPoint_18;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = __this->___m_TargetEndPoint_20;
 		NullCheck(L_3);
 		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_3, L_4, NULL);
-		// if (m_AlignPrefabWithSurfaceNormal)
-		bool L_5 = __this->___m_AlignPrefabWithSurfaceNormal_9;
-		if (!L_5)
+		// var relativeUpVector = (m_XROrigin != null && m_XROrigin.Origin != null)? m_XROrigin.Origin.transform.up : Vector3.up;
+		XROrigin_t5E534A6D886991AF3C1C64127E19A3A510009CFE* L_5 = __this->___m_XROrigin_16;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_6;
+		L_6 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_5, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_6)
 		{
-			goto IL_0051;
+			goto IL_0048;
 		}
 	}
 	{
-		// m_ReticleInstance.transform.rotation = Quaternion.FromToRotation(Vector3.up, m_TargetEndNormal);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = __this->___m_ReticleInstance_15;
-		NullCheck(L_6);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
-		L_7 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_6, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
-		L_8 = Vector3_get_up_mAB5269BFCBCB1BD241450C9BF2F156303D30E0C3_inline(NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9 = __this->___m_TargetEndNormal_19;
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_10;
-		L_10 = Quaternion_FromToRotation_m041093DBB23CB3641118310881D6B7746E3B8418(L_8, L_9, NULL);
+		XROrigin_t5E534A6D886991AF3C1C64127E19A3A510009CFE* L_7 = __this->___m_XROrigin_16;
 		NullCheck(L_7);
-		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_7, L_10, NULL);
-		goto IL_008e;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8;
+		L_8 = XROrigin_get_Origin_mCE6A3B327ACE6FAEDCC67A9DC952FEED191C26B6_inline(L_7, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_9;
+		L_9 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_8, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (L_9)
+		{
+			goto IL_004f;
+		}
 	}
 
-IL_0051:
+IL_0048:
 	{
-		// m_ReticleInstance.transform.rotation = Quaternion.FromToRotation(Vector3.up, (m_Interactor.attachTransform.position - m_TargetEndPoint).normalized);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_11 = __this->___m_ReticleInstance_15;
-		NullCheck(L_11);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_12;
-		L_12 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_11, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13;
-		L_13 = Vector3_get_up_mAB5269BFCBCB1BD241450C9BF2F156303D30E0C3_inline(NULL);
-		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_14 = __this->___m_Interactor_16;
-		NullCheck(L_14);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_15;
-		L_15 = XRBaseInteractor_get_attachTransform_m704C74165ED1463CF8B79670066472AE4BD33482_inline(L_14, NULL);
-		NullCheck(L_15);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16;
-		L_16 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_15, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17 = __this->___m_TargetEndPoint_18;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18;
-		L_18 = Vector3_op_Subtraction_m1690F44F6DC92B770A940B6CF8AE0535625A9824_inline(L_16, L_17, NULL);
-		V_1 = L_18;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19;
-		L_19 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline((&V_1), NULL);
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_20;
-		L_20 = Quaternion_FromToRotation_m041093DBB23CB3641118310881D6B7746E3B8418(L_13, L_19, NULL);
-		NullCheck(L_12);
-		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_12, L_20, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
+		L_10 = Vector3_get_up_mAB5269BFCBCB1BD241450C9BF2F156303D30E0C3_inline(NULL);
+		G_B5_0 = L_10;
+		goto IL_0064;
 	}
 
-IL_008e:
+IL_004f:
+	{
+		XROrigin_t5E534A6D886991AF3C1C64127E19A3A510009CFE* L_11 = __this->___m_XROrigin_16;
+		NullCheck(L_11);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12;
+		L_12 = XROrigin_get_Origin_mCE6A3B327ACE6FAEDCC67A9DC952FEED191C26B6_inline(L_11, NULL);
+		NullCheck(L_12);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13;
+		L_13 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_12, NULL);
+		NullCheck(L_13);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14;
+		L_14 = Transform_get_up_mE47A9D9D96422224DD0539AA5524DA5440145BB2(L_13, NULL);
+		G_B5_0 = L_14;
+	}
+
+IL_0064:
+	{
+		V_0 = G_B5_0;
+		// if (m_AlignPrefabWithSurfaceNormal && m_HasRaycastHit)
+		bool L_15 = __this->___m_AlignPrefabWithSurfaceNormal_9;
+		if (!L_15)
+		{
+			goto IL_00e8;
+		}
+	}
+	{
+		bool L_16 = __this->___m_HasRaycastHit_23;
+		if (!L_16)
+		{
+			goto IL_00e8;
+		}
+	}
+	{
+		// var vectorToProject = relativeUpVector;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17 = V_0;
+		V_2 = L_17;
+		// var targetNormalProjectedVectorDotProduct = Vector3.Dot(m_TargetEndNormal, vectorToProject);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18 = __this->___m_TargetEndNormal_21;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19 = V_2;
+		float L_20;
+		L_20 = Vector3_Dot_m4688A1A524306675DBDB1E6D483F35E85E3CE6D8_inline(L_18, L_19, NULL);
+		V_3 = L_20;
+		// if (Mathf.Approximately(Mathf.Abs(targetNormalProjectedVectorDotProduct), 1f))
+		float L_21 = V_3;
+		float L_22;
+		L_22 = fabsf(L_21);
+		bool L_23;
+		L_23 = Mathf_Approximately_m1C8DD0BB6A2D22A7DCF09AD7F8EE9ABD12D3F620_inline(L_22, (1.0f), NULL);
+		if (!L_23)
+		{
+			goto IL_00ad;
+		}
+	}
+	{
+		// vectorToProject = m_Interactor.transform.forward * targetNormalProjectedVectorDotProduct;
+		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_24 = __this->___m_Interactor_18;
+		NullCheck(L_24);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_25;
+		L_25 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_24, NULL);
+		NullCheck(L_25);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_26;
+		L_26 = Transform_get_forward_mFCFACF7165FDAB21E80E384C494DF278386CEE2F(L_25, NULL);
+		float L_27 = V_3;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_28;
+		L_28 = Vector3_op_Multiply_m516FE285F5342F922C6EB3FCB33197E9017FF484_inline(L_26, L_27, NULL);
+		V_2 = L_28;
+	}
+
+IL_00ad:
+	{
+		// var forwardVector = Vector3.ProjectOnPlane(vectorToProject, m_TargetEndNormal);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_29 = V_2;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_30 = __this->___m_TargetEndNormal_21;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_31;
+		L_31 = Vector3_ProjectOnPlane_mCAFA9F9416EA4740DCA8757B6E52260BF536770A_inline(L_29, L_30, NULL);
+		V_4 = L_31;
+		// if(forwardVector != Vector3.zero)
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_32 = V_4;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_33;
+		L_33 = Vector3_get_zero_m9D7F7B580B5A276411267E96AA3425736D9BDC83_inline(NULL);
+		bool L_34;
+		L_34 = Vector3_op_Inequality_m6A7FB1C9E9DE194708997BFA24C6E238D92D908E_inline(L_32, L_33, NULL);
+		if (!L_34)
+		{
+			goto IL_0122;
+		}
+	}
+	{
+		// m_ReticleInstance.transform.rotation = Quaternion.LookRotation(forwardVector, m_TargetEndNormal);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_35 = __this->___m_ReticleInstance_17;
+		NullCheck(L_35);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_36;
+		L_36 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_35, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_37 = V_4;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_38 = __this->___m_TargetEndNormal_21;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_39;
+		L_39 = Quaternion_LookRotation_mE6859FEBE85BC0AE72A14159988151FF69BF4401(L_37, L_38, NULL);
+		NullCheck(L_36);
+		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_36, L_39, NULL);
+		goto IL_0122;
+	}
+
+IL_00e8:
+	{
+		// m_ReticleInstance.transform.rotation = Quaternion.LookRotation(relativeUpVector, (m_Interactor.attachTransform.position - m_TargetEndPoint).normalized);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_40 = __this->___m_ReticleInstance_17;
+		NullCheck(L_40);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_41;
+		L_41 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_40, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_42 = V_0;
+		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_43 = __this->___m_Interactor_18;
+		NullCheck(L_43);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_44;
+		L_44 = XRBaseInteractor_get_attachTransform_m704C74165ED1463CF8B79670066472AE4BD33482_inline(L_43, NULL);
+		NullCheck(L_44);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_45;
+		L_45 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_44, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_46 = __this->___m_TargetEndPoint_20;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_47;
+		L_47 = Vector3_op_Subtraction_m1690F44F6DC92B770A940B6CF8AE0535625A9824_inline(L_45, L_46, NULL);
+		V_5 = L_47;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_48;
+		L_48 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline((&V_5), NULL);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_49;
+		L_49 = Quaternion_LookRotation_mE6859FEBE85BC0AE72A14159988151FF69BF4401(L_42, L_48, NULL);
+		NullCheck(L_41);
+		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_41, L_49, NULL);
+	}
+
+IL_0122:
 	{
 		// var scaleFactor = m_PrefabScalingFactor;
-		float L_21 = __this->___m_PrefabScalingFactor_7;
-		V_0 = L_21;
+		float L_50 = __this->___m_PrefabScalingFactor_7;
+		V_1 = L_50;
 		// if (m_UndoDistanceScaling)
-		bool L_22 = __this->___m_UndoDistanceScaling_8;
-		if (!L_22)
+		bool L_51 = __this->___m_UndoDistanceScaling_8;
+		if (!L_51)
 		{
-			goto IL_00bb;
+			goto IL_014f;
 		}
 	}
 	{
 		// scaleFactor *= Vector3.Distance(m_Interactor.attachTransform.position, m_TargetEndPoint);
-		float L_23 = V_0;
-		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_24 = __this->___m_Interactor_16;
-		NullCheck(L_24);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_25;
-		L_25 = XRBaseInteractor_get_attachTransform_m704C74165ED1463CF8B79670066472AE4BD33482_inline(L_24, NULL);
-		NullCheck(L_25);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_26;
-		L_26 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_25, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_27 = __this->___m_TargetEndPoint_18;
-		float L_28;
-		L_28 = Vector3_Distance_m99C722723EDD875852EF854AD7B7C4F8AC4F84AB_inline(L_26, L_27, NULL);
-		V_0 = ((float)il2cpp_codegen_multiply(L_23, L_28));
+		float L_52 = V_1;
+		XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158* L_53 = __this->___m_Interactor_18;
+		NullCheck(L_53);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_54;
+		L_54 = XRBaseInteractor_get_attachTransform_m704C74165ED1463CF8B79670066472AE4BD33482_inline(L_53, NULL);
+		NullCheck(L_54);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_55;
+		L_55 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_54, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_56 = __this->___m_TargetEndPoint_20;
+		float L_57;
+		L_57 = Vector3_Distance_m99C722723EDD875852EF854AD7B7C4F8AC4F84AB_inline(L_55, L_56, NULL);
+		V_1 = ((float)il2cpp_codegen_multiply(L_52, L_57));
 	}
 
-IL_00bb:
+IL_014f:
 	{
 		// m_ReticleInstance.transform.localScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_29 = __this->___m_ReticleInstance_15;
-		NullCheck(L_29);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_30;
-		L_30 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_29, NULL);
-		float L_31 = V_0;
-		float L_32 = V_0;
-		float L_33 = V_0;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_34;
-		memset((&L_34), 0, sizeof(L_34));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_34), L_31, L_32, L_33, /*hidden argument*/NULL);
-		NullCheck(L_30);
-		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_30, L_34, NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_58 = __this->___m_ReticleInstance_17;
+		NullCheck(L_58);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_59;
+		L_59 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_58, NULL);
+		float L_60 = V_1;
+		float L_61 = V_1;
+		float L_62 = V_1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_63;
+		memset((&L_63), 0, sizeof(L_63));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_63), L_60, L_61, L_62, /*hidden argument*/NULL);
+		NullCheck(L_59);
+		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_59, L_63, NULL);
 		// reticleActive = true;
 		XRInteractorReticleVisual_set_reticleActive_m9AEE679F93F9047FAFA1636B67A6B440F9540120(__this, (bool)1, NULL);
 	}
 
-IL_00da:
+IL_016e:
 	{
 		// }
 		return;
@@ -31320,8 +31580,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRInteractorReticleVisual__ctor_m23E64B7
 		__this->___m_RaycastMask_13 = L_0;
 		// readonly RaycastHit[] m_RaycastHits = new RaycastHit[k_MaxRaycastHits];
 		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_1 = (RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8*)(RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8*)SZArrayNew(RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8_il2cpp_TypeInfo_var, (uint32_t)((int32_t)10));
-		__this->___m_RaycastHits_21 = L_1;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_RaycastHits_21), (void*)L_1);
+		__this->___m_RaycastHits_24 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_RaycastHits_24), (void*)L_1);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
@@ -31339,7 +31599,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XRBaseControllerInteractor_get_select
 {
 	{
 		// get => m_SelectActionTrigger;
-		int32_t L_0 = __this->___m_SelectActionTrigger_48;
+		int32_t L_0 = __this->___m_SelectActionTrigger_59;
 		return L_0;
 	}
 }
@@ -31349,7 +31609,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_selectAct
 	{
 		// set => m_SelectActionTrigger = value;
 		int32_t L_0 = ___value0;
-		__this->___m_SelectActionTrigger_48 = L_0;
+		__this->___m_SelectActionTrigger_59 = L_0;
 		return;
 	}
 }
@@ -31358,7 +31618,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_hideContr
 {
 	{
 		// get => m_HideControllerOnSelect;
-		bool L_0 = __this->___m_HideControllerOnSelect_49;
+		bool L_0 = __this->___m_HideControllerOnSelect_60;
 		return L_0;
 	}
 }
@@ -31374,16 +31634,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_hideContr
 	{
 		// m_HideControllerOnSelect = value;
 		bool L_0 = ___value0;
-		__this->___m_HideControllerOnSelect_49 = L_0;
+		__this->___m_HideControllerOnSelect_60 = L_0;
 		// if (!m_HideControllerOnSelect && m_Controller != null)
-		bool L_1 = __this->___m_HideControllerOnSelect_49;
+		bool L_1 = __this->___m_HideControllerOnSelect_60;
 		if (L_1)
 		{
 			goto IL_0029;
 		}
 	}
 	{
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_2 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_2 = __this->___m_Controller_96;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
 		L_3 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_2, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -31394,7 +31654,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_hideContr
 	}
 	{
 		// m_Controller.hideControllerModel = false;
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_4 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_4 = __this->___m_Controller_96;
 		NullCheck(L_4);
 		XRBaseController_set_hideControllerModel_mC89F417807EF5C8E4D787AE69746FF81B1C3EF3A(L_4, (bool)0, NULL);
 	}
@@ -31410,7 +31670,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_allowHove
 {
 	{
 		// get => m_AllowHoveredActivate;
-		bool L_0 = __this->___m_AllowHoveredActivate_50;
+		bool L_0 = __this->___m_AllowHoveredActivate_61;
 		return L_0;
 	}
 }
@@ -31420,7 +31680,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_allowHove
 	{
 		// set => m_AllowHoveredActivate = value;
 		bool L_0 = ___value0;
-		__this->___m_AllowHoveredActivate_50 = L_0;
+		__this->___m_AllowHoveredActivate_61 = L_0;
 		return;
 	}
 }
@@ -31429,7 +31689,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XRBaseControllerInteractor_get_target
 {
 	{
 		// get => m_TargetPriorityMode;
-		int32_t L_0 = __this->___m_TargetPriorityMode_51;
+		int32_t L_0 = __this->___m_TargetPriorityMode_62;
 		return L_0;
 	}
 }
@@ -31439,7 +31699,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_targetPri
 	{
 		// set => m_TargetPriorityMode = value;
 		int32_t L_0 = ___value0;
-		__this->___m_TargetPriorityMode_51 = L_0;
+		__this->___m_TargetPriorityMode_62 = L_0;
 		return;
 	}
 }
@@ -31448,7 +31708,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_playAudio
 {
 	{
 		// get => m_PlayAudioClipOnSelectEntered;
-		bool L_0 = __this->___m_PlayAudioClipOnSelectEntered_52;
+		bool L_0 = __this->___m_PlayAudioClipOnSelectEntered_63;
 		return L_0;
 	}
 }
@@ -31458,7 +31718,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_playAudio
 	{
 		// set => m_PlayAudioClipOnSelectEntered = value;
 		bool L_0 = ___value0;
-		__this->___m_PlayAudioClipOnSelectEntered_52 = L_0;
+		__this->___m_PlayAudioClipOnSelectEntered_63 = L_0;
 		return;
 	}
 }
@@ -31467,7 +31727,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D
 {
 	{
 		// get => m_AudioClipForOnSelectEntered;
-		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___m_AudioClipForOnSelectEntered_53;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___m_AudioClipForOnSelectEntered_64;
 		return L_0;
 	}
 }
@@ -31477,8 +31737,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_audioClip
 	{
 		// set => m_AudioClipForOnSelectEntered = value;
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = ___value0;
-		__this->___m_AudioClipForOnSelectEntered_53 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AudioClipForOnSelectEntered_53), (void*)L_0);
+		__this->___m_AudioClipForOnSelectEntered_64 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AudioClipForOnSelectEntered_64), (void*)L_0);
 		return;
 	}
 }
@@ -31487,7 +31747,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_playAudio
 {
 	{
 		// get => m_PlayAudioClipOnSelectExited;
-		bool L_0 = __this->___m_PlayAudioClipOnSelectExited_54;
+		bool L_0 = __this->___m_PlayAudioClipOnSelectExited_65;
 		return L_0;
 	}
 }
@@ -31497,7 +31757,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_playAudio
 	{
 		// set => m_PlayAudioClipOnSelectExited = value;
 		bool L_0 = ___value0;
-		__this->___m_PlayAudioClipOnSelectExited_54 = L_0;
+		__this->___m_PlayAudioClipOnSelectExited_65 = L_0;
 		return;
 	}
 }
@@ -31506,7 +31766,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D
 {
 	{
 		// get => m_AudioClipForOnSelectExited;
-		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___m_AudioClipForOnSelectExited_55;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___m_AudioClipForOnSelectExited_66;
 		return L_0;
 	}
 }
@@ -31516,8 +31776,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_audioClip
 	{
 		// set => m_AudioClipForOnSelectExited = value;
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = ___value0;
-		__this->___m_AudioClipForOnSelectExited_55 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AudioClipForOnSelectExited_55), (void*)L_0);
+		__this->___m_AudioClipForOnSelectExited_66 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AudioClipForOnSelectExited_66), (void*)L_0);
 		return;
 	}
 }
@@ -31526,7 +31786,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_playAudio
 {
 	{
 		// get => m_PlayAudioClipOnSelectCanceled;
-		bool L_0 = __this->___m_PlayAudioClipOnSelectCanceled_56;
+		bool L_0 = __this->___m_PlayAudioClipOnSelectCanceled_67;
 		return L_0;
 	}
 }
@@ -31536,7 +31796,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_playAudio
 	{
 		// set => m_PlayAudioClipOnSelectCanceled = value;
 		bool L_0 = ___value0;
-		__this->___m_PlayAudioClipOnSelectCanceled_56 = L_0;
+		__this->___m_PlayAudioClipOnSelectCanceled_67 = L_0;
 		return;
 	}
 }
@@ -31545,7 +31805,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D
 {
 	{
 		// get => m_AudioClipForOnSelectCanceled;
-		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___m_AudioClipForOnSelectCanceled_57;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___m_AudioClipForOnSelectCanceled_68;
 		return L_0;
 	}
 }
@@ -31555,8 +31815,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_audioClip
 	{
 		// set => m_AudioClipForOnSelectCanceled = value;
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = ___value0;
-		__this->___m_AudioClipForOnSelectCanceled_57 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AudioClipForOnSelectCanceled_57), (void*)L_0);
+		__this->___m_AudioClipForOnSelectCanceled_68 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AudioClipForOnSelectCanceled_68), (void*)L_0);
 		return;
 	}
 }
@@ -31565,7 +31825,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_playAudio
 {
 	{
 		// get => m_PlayAudioClipOnHoverEntered;
-		bool L_0 = __this->___m_PlayAudioClipOnHoverEntered_58;
+		bool L_0 = __this->___m_PlayAudioClipOnHoverEntered_69;
 		return L_0;
 	}
 }
@@ -31575,7 +31835,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_playAudio
 	{
 		// set => m_PlayAudioClipOnHoverEntered = value;
 		bool L_0 = ___value0;
-		__this->___m_PlayAudioClipOnHoverEntered_58 = L_0;
+		__this->___m_PlayAudioClipOnHoverEntered_69 = L_0;
 		return;
 	}
 }
@@ -31584,7 +31844,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D
 {
 	{
 		// get => m_AudioClipForOnHoverEntered;
-		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___m_AudioClipForOnHoverEntered_59;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___m_AudioClipForOnHoverEntered_70;
 		return L_0;
 	}
 }
@@ -31594,8 +31854,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_audioClip
 	{
 		// set => m_AudioClipForOnHoverEntered = value;
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = ___value0;
-		__this->___m_AudioClipForOnHoverEntered_59 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AudioClipForOnHoverEntered_59), (void*)L_0);
+		__this->___m_AudioClipForOnHoverEntered_70 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AudioClipForOnHoverEntered_70), (void*)L_0);
 		return;
 	}
 }
@@ -31604,7 +31864,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_playAudio
 {
 	{
 		// get => m_PlayAudioClipOnHoverExited;
-		bool L_0 = __this->___m_PlayAudioClipOnHoverExited_60;
+		bool L_0 = __this->___m_PlayAudioClipOnHoverExited_71;
 		return L_0;
 	}
 }
@@ -31614,7 +31874,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_playAudio
 	{
 		// set => m_PlayAudioClipOnHoverExited = value;
 		bool L_0 = ___value0;
-		__this->___m_PlayAudioClipOnHoverExited_60 = L_0;
+		__this->___m_PlayAudioClipOnHoverExited_71 = L_0;
 		return;
 	}
 }
@@ -31623,7 +31883,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D
 {
 	{
 		// get => m_AudioClipForOnHoverExited;
-		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___m_AudioClipForOnHoverExited_61;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___m_AudioClipForOnHoverExited_72;
 		return L_0;
 	}
 }
@@ -31633,8 +31893,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_audioClip
 	{
 		// set => m_AudioClipForOnHoverExited = value;
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = ___value0;
-		__this->___m_AudioClipForOnHoverExited_61 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AudioClipForOnHoverExited_61), (void*)L_0);
+		__this->___m_AudioClipForOnHoverExited_72 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AudioClipForOnHoverExited_72), (void*)L_0);
 		return;
 	}
 }
@@ -31643,7 +31903,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_playAudio
 {
 	{
 		// get => m_PlayAudioClipOnHoverCanceled;
-		bool L_0 = __this->___m_PlayAudioClipOnHoverCanceled_62;
+		bool L_0 = __this->___m_PlayAudioClipOnHoverCanceled_73;
 		return L_0;
 	}
 }
@@ -31653,7 +31913,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_playAudio
 	{
 		// set => m_PlayAudioClipOnHoverCanceled = value;
 		bool L_0 = ___value0;
-		__this->___m_PlayAudioClipOnHoverCanceled_62 = L_0;
+		__this->___m_PlayAudioClipOnHoverCanceled_73 = L_0;
 		return;
 	}
 }
@@ -31662,7 +31922,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D
 {
 	{
 		// get => m_AudioClipForOnHoverCanceled;
-		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___m_AudioClipForOnHoverCanceled_63;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___m_AudioClipForOnHoverCanceled_74;
 		return L_0;
 	}
 }
@@ -31672,8 +31932,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_audioClip
 	{
 		// set => m_AudioClipForOnHoverCanceled = value;
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = ___value0;
-		__this->___m_AudioClipForOnHoverCanceled_63 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AudioClipForOnHoverCanceled_63), (void*)L_0);
+		__this->___m_AudioClipForOnHoverCanceled_74 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AudioClipForOnHoverCanceled_74), (void*)L_0);
 		return;
 	}
 }
@@ -31682,7 +31942,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_allowHove
 {
 	{
 		// get => m_AllowHoverAudioWhileSelecting;
-		bool L_0 = __this->___m_AllowHoverAudioWhileSelecting_64;
+		bool L_0 = __this->___m_AllowHoverAudioWhileSelecting_75;
 		return L_0;
 	}
 }
@@ -31692,7 +31952,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_allowHove
 	{
 		// set => m_AllowHoverAudioWhileSelecting = value;
 		bool L_0 = ___value0;
-		__this->___m_AllowHoverAudioWhileSelecting_64 = L_0;
+		__this->___m_AllowHoverAudioWhileSelecting_75 = L_0;
 		return;
 	}
 }
@@ -31701,7 +31961,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_playHapti
 {
 	{
 		// get => m_PlayHapticsOnSelectEntered;
-		bool L_0 = __this->___m_PlayHapticsOnSelectEntered_65;
+		bool L_0 = __this->___m_PlayHapticsOnSelectEntered_76;
 		return L_0;
 	}
 }
@@ -31711,7 +31971,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_playHapti
 	{
 		// set => m_PlayHapticsOnSelectEntered = value;
 		bool L_0 = ___value0;
-		__this->___m_PlayHapticsOnSelectEntered_65 = L_0;
+		__this->___m_PlayHapticsOnSelectEntered_76 = L_0;
 		return;
 	}
 }
@@ -31720,7 +31980,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float XRBaseControllerInteractor_get_hapticSe
 {
 	{
 		// get => m_HapticSelectEnterIntensity;
-		float L_0 = __this->___m_HapticSelectEnterIntensity_66;
+		float L_0 = __this->___m_HapticSelectEnterIntensity_77;
 		return L_0;
 	}
 }
@@ -31730,7 +31990,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_hapticSel
 	{
 		// set => m_HapticSelectEnterIntensity= value;
 		float L_0 = ___value0;
-		__this->___m_HapticSelectEnterIntensity_66 = L_0;
+		__this->___m_HapticSelectEnterIntensity_77 = L_0;
 		return;
 	}
 }
@@ -31739,7 +31999,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float XRBaseControllerInteractor_get_hapticSe
 {
 	{
 		// get => m_HapticSelectEnterDuration;
-		float L_0 = __this->___m_HapticSelectEnterDuration_67;
+		float L_0 = __this->___m_HapticSelectEnterDuration_78;
 		return L_0;
 	}
 }
@@ -31749,7 +32009,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_hapticSel
 	{
 		// set => m_HapticSelectEnterDuration = value;
 		float L_0 = ___value0;
-		__this->___m_HapticSelectEnterDuration_67 = L_0;
+		__this->___m_HapticSelectEnterDuration_78 = L_0;
 		return;
 	}
 }
@@ -31758,7 +32018,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_playHapti
 {
 	{
 		// get => m_PlayHapticsOnSelectExited;
-		bool L_0 = __this->___m_PlayHapticsOnSelectExited_68;
+		bool L_0 = __this->___m_PlayHapticsOnSelectExited_79;
 		return L_0;
 	}
 }
@@ -31768,7 +32028,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_playHapti
 	{
 		// set => m_PlayHapticsOnSelectExited = value;
 		bool L_0 = ___value0;
-		__this->___m_PlayHapticsOnSelectExited_68 = L_0;
+		__this->___m_PlayHapticsOnSelectExited_79 = L_0;
 		return;
 	}
 }
@@ -31777,7 +32037,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float XRBaseControllerInteractor_get_hapticSe
 {
 	{
 		// get => m_HapticSelectExitIntensity;
-		float L_0 = __this->___m_HapticSelectExitIntensity_69;
+		float L_0 = __this->___m_HapticSelectExitIntensity_80;
 		return L_0;
 	}
 }
@@ -31787,7 +32047,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_hapticSel
 	{
 		// set => m_HapticSelectExitIntensity= value;
 		float L_0 = ___value0;
-		__this->___m_HapticSelectExitIntensity_69 = L_0;
+		__this->___m_HapticSelectExitIntensity_80 = L_0;
 		return;
 	}
 }
@@ -31796,7 +32056,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float XRBaseControllerInteractor_get_hapticSe
 {
 	{
 		// get => m_HapticSelectExitDuration;
-		float L_0 = __this->___m_HapticSelectExitDuration_70;
+		float L_0 = __this->___m_HapticSelectExitDuration_81;
 		return L_0;
 	}
 }
@@ -31806,7 +32066,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_hapticSel
 	{
 		// set => m_HapticSelectExitDuration = value;
 		float L_0 = ___value0;
-		__this->___m_HapticSelectExitDuration_70 = L_0;
+		__this->___m_HapticSelectExitDuration_81 = L_0;
 		return;
 	}
 }
@@ -31815,7 +32075,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_playHapti
 {
 	{
 		// get => m_PlayHapticsOnSelectCanceled;
-		bool L_0 = __this->___m_PlayHapticsOnSelectCanceled_71;
+		bool L_0 = __this->___m_PlayHapticsOnSelectCanceled_82;
 		return L_0;
 	}
 }
@@ -31825,7 +32085,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_playHapti
 	{
 		// set => m_PlayHapticsOnSelectCanceled = value;
 		bool L_0 = ___value0;
-		__this->___m_PlayHapticsOnSelectCanceled_71 = L_0;
+		__this->___m_PlayHapticsOnSelectCanceled_82 = L_0;
 		return;
 	}
 }
@@ -31834,7 +32094,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float XRBaseControllerInteractor_get_hapticSe
 {
 	{
 		// get => m_HapticSelectCancelIntensity;
-		float L_0 = __this->___m_HapticSelectCancelIntensity_72;
+		float L_0 = __this->___m_HapticSelectCancelIntensity_83;
 		return L_0;
 	}
 }
@@ -31844,7 +32104,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_hapticSel
 	{
 		// set => m_HapticSelectCancelIntensity= value;
 		float L_0 = ___value0;
-		__this->___m_HapticSelectCancelIntensity_72 = L_0;
+		__this->___m_HapticSelectCancelIntensity_83 = L_0;
 		return;
 	}
 }
@@ -31853,7 +32113,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float XRBaseControllerInteractor_get_hapticSe
 {
 	{
 		// get => m_HapticSelectCancelDuration;
-		float L_0 = __this->___m_HapticSelectCancelDuration_73;
+		float L_0 = __this->___m_HapticSelectCancelDuration_84;
 		return L_0;
 	}
 }
@@ -31863,7 +32123,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_hapticSel
 	{
 		// set => m_HapticSelectCancelDuration = value;
 		float L_0 = ___value0;
-		__this->___m_HapticSelectCancelDuration_73 = L_0;
+		__this->___m_HapticSelectCancelDuration_84 = L_0;
 		return;
 	}
 }
@@ -31872,7 +32132,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_playHapti
 {
 	{
 		// get => m_PlayHapticsOnHoverEntered;
-		bool L_0 = __this->___m_PlayHapticsOnHoverEntered_74;
+		bool L_0 = __this->___m_PlayHapticsOnHoverEntered_85;
 		return L_0;
 	}
 }
@@ -31882,7 +32142,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_playHapti
 	{
 		// set => m_PlayHapticsOnHoverEntered = value;
 		bool L_0 = ___value0;
-		__this->___m_PlayHapticsOnHoverEntered_74 = L_0;
+		__this->___m_PlayHapticsOnHoverEntered_85 = L_0;
 		return;
 	}
 }
@@ -31891,7 +32151,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float XRBaseControllerInteractor_get_hapticHo
 {
 	{
 		// get => m_HapticHoverEnterIntensity;
-		float L_0 = __this->___m_HapticHoverEnterIntensity_75;
+		float L_0 = __this->___m_HapticHoverEnterIntensity_86;
 		return L_0;
 	}
 }
@@ -31901,7 +32161,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_hapticHov
 	{
 		// set => m_HapticHoverEnterIntensity = value;
 		float L_0 = ___value0;
-		__this->___m_HapticHoverEnterIntensity_75 = L_0;
+		__this->___m_HapticHoverEnterIntensity_86 = L_0;
 		return;
 	}
 }
@@ -31910,7 +32170,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float XRBaseControllerInteractor_get_hapticHo
 {
 	{
 		// get => m_HapticHoverEnterDuration;
-		float L_0 = __this->___m_HapticHoverEnterDuration_76;
+		float L_0 = __this->___m_HapticHoverEnterDuration_87;
 		return L_0;
 	}
 }
@@ -31920,7 +32180,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_hapticHov
 	{
 		// set => m_HapticHoverEnterDuration = value;
 		float L_0 = ___value0;
-		__this->___m_HapticHoverEnterDuration_76 = L_0;
+		__this->___m_HapticHoverEnterDuration_87 = L_0;
 		return;
 	}
 }
@@ -31929,7 +32189,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_playHapti
 {
 	{
 		// get => m_PlayHapticsOnHoverExited;
-		bool L_0 = __this->___m_PlayHapticsOnHoverExited_77;
+		bool L_0 = __this->___m_PlayHapticsOnHoverExited_88;
 		return L_0;
 	}
 }
@@ -31939,7 +32199,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_playHapti
 	{
 		// set => m_PlayHapticsOnHoverExited = value;
 		bool L_0 = ___value0;
-		__this->___m_PlayHapticsOnHoverExited_77 = L_0;
+		__this->___m_PlayHapticsOnHoverExited_88 = L_0;
 		return;
 	}
 }
@@ -31948,7 +32208,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float XRBaseControllerInteractor_get_hapticHo
 {
 	{
 		// get => m_HapticHoverExitIntensity;
-		float L_0 = __this->___m_HapticHoverExitIntensity_78;
+		float L_0 = __this->___m_HapticHoverExitIntensity_89;
 		return L_0;
 	}
 }
@@ -31958,7 +32218,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_hapticHov
 	{
 		// set => m_HapticHoverExitIntensity = value;
 		float L_0 = ___value0;
-		__this->___m_HapticHoverExitIntensity_78 = L_0;
+		__this->___m_HapticHoverExitIntensity_89 = L_0;
 		return;
 	}
 }
@@ -31967,7 +32227,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float XRBaseControllerInteractor_get_hapticHo
 {
 	{
 		// get => m_HapticHoverExitDuration;
-		float L_0 = __this->___m_HapticHoverExitDuration_79;
+		float L_0 = __this->___m_HapticHoverExitDuration_90;
 		return L_0;
 	}
 }
@@ -31977,7 +32237,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_hapticHov
 	{
 		// set => m_HapticHoverExitDuration = value;
 		float L_0 = ___value0;
-		__this->___m_HapticHoverExitDuration_79 = L_0;
+		__this->___m_HapticHoverExitDuration_90 = L_0;
 		return;
 	}
 }
@@ -31986,7 +32246,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_playHapti
 {
 	{
 		// get => m_PlayHapticsOnHoverCanceled;
-		bool L_0 = __this->___m_PlayHapticsOnHoverCanceled_80;
+		bool L_0 = __this->___m_PlayHapticsOnHoverCanceled_91;
 		return L_0;
 	}
 }
@@ -31996,7 +32256,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_playHapti
 	{
 		// set => m_PlayHapticsOnHoverCanceled = value;
 		bool L_0 = ___value0;
-		__this->___m_PlayHapticsOnHoverCanceled_80 = L_0;
+		__this->___m_PlayHapticsOnHoverCanceled_91 = L_0;
 		return;
 	}
 }
@@ -32005,7 +32265,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float XRBaseControllerInteractor_get_hapticHo
 {
 	{
 		// get => m_HapticHoverCancelIntensity;
-		float L_0 = __this->___m_HapticHoverCancelIntensity_81;
+		float L_0 = __this->___m_HapticHoverCancelIntensity_92;
 		return L_0;
 	}
 }
@@ -32015,7 +32275,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_hapticHov
 	{
 		// set => m_HapticHoverCancelIntensity= value;
 		float L_0 = ___value0;
-		__this->___m_HapticHoverCancelIntensity_81 = L_0;
+		__this->___m_HapticHoverCancelIntensity_92 = L_0;
 		return;
 	}
 }
@@ -32024,7 +32284,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float XRBaseControllerInteractor_get_hapticHo
 {
 	{
 		// get => m_HapticHoverCancelDuration;
-		float L_0 = __this->___m_HapticHoverCancelDuration_82;
+		float L_0 = __this->___m_HapticHoverCancelDuration_93;
 		return L_0;
 	}
 }
@@ -32034,7 +32294,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_hapticHov
 	{
 		// set => m_HapticHoverCancelDuration = value;
 		float L_0 = ___value0;
-		__this->___m_HapticHoverCancelDuration_82 = L_0;
+		__this->___m_HapticHoverCancelDuration_93 = L_0;
 		return;
 	}
 }
@@ -32043,7 +32303,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_allowHove
 {
 	{
 		// get => m_AllowHoverHapticsWhileSelecting;
-		bool L_0 = __this->___m_AllowHoverHapticsWhileSelecting_83;
+		bool L_0 = __this->___m_AllowHoverHapticsWhileSelecting_94;
 		return L_0;
 	}
 }
@@ -32053,7 +32313,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_allowHove
 	{
 		// set => m_AllowHoverHapticsWhileSelecting = value;
 		bool L_0 = ___value0;
-		__this->___m_AllowHoverHapticsWhileSelecting_83 = L_0;
+		__this->___m_AllowHoverHapticsWhileSelecting_94 = L_0;
 		return;
 	}
 }
@@ -32062,7 +32322,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_allowActi
 {
 	{
 		// get => m_AllowActivate;
-		bool L_0 = __this->___m_AllowActivate_84;
+		bool L_0 = __this->___m_AllowActivate_95;
 		return L_0;
 	}
 }
@@ -32072,7 +32332,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_allowActi
 	{
 		// set => m_AllowActivate = value;
 		bool L_0 = ___value0;
-		__this->___m_AllowActivate_84 = L_0;
+		__this->___m_AllowActivate_95 = L_0;
 		return;
 	}
 }
@@ -32081,7 +32341,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XRBaseController_t44C1BB30A7E1D279DD2508F34D3
 {
 	{
 		// get => m_Controller;
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_0 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_0 = __this->___m_Controller_96;
 		return L_0;
 	}
 }
@@ -32091,8 +32351,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_set_xrControl
 	{
 		// set => m_Controller = value;
 		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_0 = ___value0;
-		__this->___m_Controller_85 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Controller_85), (void*)L_0);
+		__this->___m_Controller_96 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Controller_96), (void*)L_0);
 		return;
 	}
 }
@@ -32121,10 +32381,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_Awake_m56049D
 		// m_Controller = FindControllerComponent();
 		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_1;
 		L_1 = XRBaseControllerInteractor_FindControllerComponent_m9DFD40AF2762F1B93D44FDA4650E5601B7C707E3(__this, NULL);
-		__this->___m_Controller_85 = L_1;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Controller_85), (void*)L_1);
+		__this->___m_Controller_96 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Controller_96), (void*)L_1);
 		// if (m_Controller == null)
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_2 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_2 = __this->___m_Controller_96;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
 		L_3 = Object_op_Equality_mD3DB0D72CE0250C84033DC2A90AEF9D59896E536(L_2, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -32146,7 +32406,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_Awake_m56049D
 IL_0046:
 	{
 		// if (m_SelectActionTrigger == InputTriggerType.Toggle && startingSelectedInteractable != null)
-		int32_t L_6 = __this->___m_SelectActionTrigger_48;
+		int32_t L_6 = __this->___m_SelectActionTrigger_59;
 		if ((!(((uint32_t)L_6) == ((uint32_t)2))))
 		{
 			goto IL_0064;
@@ -32165,49 +32425,49 @@ IL_0046:
 	}
 	{
 		// m_ToggleSelectActive = true;
-		__this->___m_ToggleSelectActive_89 = (bool)1;
+		__this->___m_ToggleSelectActive_100 = (bool)1;
 	}
 
 IL_0064:
 	{
 		// if (m_PlayAudioClipOnSelectEntered || m_PlayAudioClipOnSelectExited || m_PlayAudioClipOnSelectCanceled ||
 		//     m_PlayAudioClipOnHoverEntered || m_PlayAudioClipOnHoverExited || m_PlayAudioClipOnHoverCanceled)
-		bool L_9 = __this->___m_PlayAudioClipOnSelectEntered_52;
+		bool L_9 = __this->___m_PlayAudioClipOnSelectEntered_63;
 		if (L_9)
 		{
 			goto IL_0094;
 		}
 	}
 	{
-		bool L_10 = __this->___m_PlayAudioClipOnSelectExited_54;
+		bool L_10 = __this->___m_PlayAudioClipOnSelectExited_65;
 		if (L_10)
 		{
 			goto IL_0094;
 		}
 	}
 	{
-		bool L_11 = __this->___m_PlayAudioClipOnSelectCanceled_56;
+		bool L_11 = __this->___m_PlayAudioClipOnSelectCanceled_67;
 		if (L_11)
 		{
 			goto IL_0094;
 		}
 	}
 	{
-		bool L_12 = __this->___m_PlayAudioClipOnHoverEntered_58;
+		bool L_12 = __this->___m_PlayAudioClipOnHoverEntered_69;
 		if (L_12)
 		{
 			goto IL_0094;
 		}
 	}
 	{
-		bool L_13 = __this->___m_PlayAudioClipOnHoverExited_60;
+		bool L_13 = __this->___m_PlayAudioClipOnHoverExited_71;
 		if (L_13)
 		{
 			goto IL_0094;
 		}
 	}
 	{
-		bool L_14 = __this->___m_PlayAudioClipOnHoverCanceled_62;
+		bool L_14 = __this->___m_PlayAudioClipOnHoverCanceled_73;
 		if (!L_14)
 		{
 			goto IL_009a;
@@ -32269,17 +32529,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_PreprocessInt
 	}
 	{
 		// m_ToggleSelectDeactivatedThisFrame = false;
-		__this->___m_ToggleSelectDeactivatedThisFrame_90 = (bool)0;
+		__this->___m_ToggleSelectDeactivatedThisFrame_101 = (bool)0;
 		// if (m_SelectActionTrigger == InputTriggerType.Toggle ||
 		//     m_SelectActionTrigger == InputTriggerType.Sticky)
-		int32_t L_2 = __this->___m_SelectActionTrigger_48;
+		int32_t L_2 = __this->___m_SelectActionTrigger_59;
 		if ((((int32_t)L_2) == ((int32_t)2)))
 		{
 			goto IL_0024;
 		}
 	}
 	{
-		int32_t L_3 = __this->___m_SelectActionTrigger_48;
+		int32_t L_3 = __this->___m_SelectActionTrigger_59;
 		if ((!(((uint32_t)L_3) == ((uint32_t)3))))
 		{
 			goto IL_0081;
@@ -32289,7 +32549,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_PreprocessInt
 IL_0024:
 	{
 		// if (m_Controller == null)
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_4 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_4 = __this->___m_Controller_96;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
 		L_5 = Object_op_Equality_mD3DB0D72CE0250C84033DC2A90AEF9D59896E536(L_4, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -32306,14 +32566,14 @@ IL_0024:
 IL_0033:
 	{
 		// if (m_ToggleSelectActive && m_Controller.selectInteractionState.activatedThisFrame)
-		bool L_6 = __this->___m_ToggleSelectActive_89;
+		bool L_6 = __this->___m_ToggleSelectActive_100;
 		if (!L_6)
 		{
 			goto IL_0065;
 		}
 	}
 	{
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_7 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_7 = __this->___m_Controller_96;
 		NullCheck(L_7);
 		InteractionState_tA1AFAB17758E43BA3F654BEAD6A61A05992003AB L_8;
 		L_8 = XRBaseController_get_selectInteractionState_m607E98EBB0AA181459CF4165499F84BEFC49B53A_inline(L_7, NULL);
@@ -32327,17 +32587,17 @@ IL_0033:
 	}
 	{
 		// m_ToggleSelectActive = false;
-		__this->___m_ToggleSelectActive_89 = (bool)0;
+		__this->___m_ToggleSelectActive_100 = (bool)0;
 		// m_ToggleSelectDeactivatedThisFrame = true;
-		__this->___m_ToggleSelectDeactivatedThisFrame_90 = (bool)1;
+		__this->___m_ToggleSelectDeactivatedThisFrame_101 = (bool)1;
 		// m_WaitingForSelectDeactivate = true;
-		__this->___m_WaitingForSelectDeactivate_91 = (bool)1;
+		__this->___m_WaitingForSelectDeactivate_102 = (bool)1;
 	}
 
 IL_0065:
 	{
 		// if (m_Controller.selectInteractionState.deactivatedThisFrame)
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_10 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_10 = __this->___m_Controller_96;
 		NullCheck(L_10);
 		InteractionState_tA1AFAB17758E43BA3F654BEAD6A61A05992003AB L_11;
 		L_11 = XRBaseController_get_selectInteractionState_m607E98EBB0AA181459CF4165499F84BEFC49B53A_inline(L_10, NULL);
@@ -32351,7 +32611,7 @@ IL_0065:
 	}
 	{
 		// m_WaitingForSelectDeactivate = false;
-		__this->___m_WaitingForSelectDeactivate_91 = (bool)0;
+		__this->___m_WaitingForSelectDeactivate_102 = (bool)0;
 	}
 
 IL_0081:
@@ -32384,7 +32644,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_ProcessIntera
 	}
 	{
 		// if (m_AllowActivate)
-		bool L_2 = __this->___m_AllowActivate_84;
+		bool L_2 = __this->___m_AllowActivate_95;
 		if (!L_2)
 		{
 			goto IL_004d;
@@ -32410,7 +32670,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_ProcessIntera
 	{
 		// GetActivateTargets(s_ActivateTargets);
 		il2cpp_codegen_runtime_class_init_inline(XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_il2cpp_TypeInfo_var);
-		List_1_tAB2FD3FF9900A585A26C6DC2D8EE94D30F2AECCA* L_7 = ((XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_StaticFields*)il2cpp_codegen_static_fields_for(XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_il2cpp_TypeInfo_var))->___s_ActivateTargets_88;
+		List_1_tAB2FD3FF9900A585A26C6DC2D8EE94D30F2AECCA* L_7 = ((XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_StaticFields*)il2cpp_codegen_static_fields_for(XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_il2cpp_TypeInfo_var))->___s_ActivateTargets_99;
 		VirtualActionInvoker1< List_1_tAB2FD3FF9900A585A26C6DC2D8EE94D30F2AECCA* >::Invoke(100 /* System.Void UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::GetActivateTargets(System.Collections.Generic.List`1<UnityEngine.XR.Interaction.Toolkit.IXRActivateInteractable>) */, __this, L_7);
 		// if (sendActivate)
 		bool L_8 = V_0;
@@ -32422,7 +32682,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_ProcessIntera
 	{
 		// SendActivateEvent(s_ActivateTargets);
 		il2cpp_codegen_runtime_class_init_inline(XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_il2cpp_TypeInfo_var);
-		List_1_tAB2FD3FF9900A585A26C6DC2D8EE94D30F2AECCA* L_9 = ((XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_StaticFields*)il2cpp_codegen_static_fields_for(XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_il2cpp_TypeInfo_var))->___s_ActivateTargets_88;
+		List_1_tAB2FD3FF9900A585A26C6DC2D8EE94D30F2AECCA* L_9 = ((XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_StaticFields*)il2cpp_codegen_static_fields_for(XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_il2cpp_TypeInfo_var))->___s_ActivateTargets_99;
 		XRBaseControllerInteractor_SendActivateEvent_m1CCDC1F6AF37B0CA504BA32566BCB1F937AE0E55(__this, L_9, NULL);
 	}
 
@@ -32438,7 +32698,7 @@ IL_003f:
 	{
 		// SendDeactivateEvent(s_ActivateTargets);
 		il2cpp_codegen_runtime_class_init_inline(XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_il2cpp_TypeInfo_var);
-		List_1_tAB2FD3FF9900A585A26C6DC2D8EE94D30F2AECCA* L_11 = ((XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_StaticFields*)il2cpp_codegen_static_fields_for(XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_il2cpp_TypeInfo_var))->___s_ActivateTargets_88;
+		List_1_tAB2FD3FF9900A585A26C6DC2D8EE94D30F2AECCA* L_11 = ((XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_StaticFields*)il2cpp_codegen_static_fields_for(XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_il2cpp_TypeInfo_var))->___s_ActivateTargets_99;
 		XRBaseControllerInteractor_SendDeactivateEvent_mAF2DA1D5D44D2F945BBFC4FDAB8434AA54380A70(__this, L_11, NULL);
 	}
 
@@ -32519,7 +32779,7 @@ IL_0009_1:
 			}
 			{
 				// using (m_ActivateEventArgs.Get(out var args))
-				LinkedPool_1_t99CFF33CB8085652A0F2FC6579D0388FB3CBAA01* L_6 = __this->___m_ActivateEventArgs_86;
+				LinkedPool_1_t99CFF33CB8085652A0F2FC6579D0388FB3CBAA01* L_6 = __this->___m_ActivateEventArgs_97;
 				NullCheck(L_6);
 				PooledObject_1_tDEF67836CC32F3200FEF9180C74FCEDC0AF074E0 L_7;
 				L_7 = LinkedPool_1_Get_m58BD747D1E32302A386BC66FDCC6DD988736A848(L_6, (&V_2), LinkedPool_1_Get_m58BD747D1E32302A386BC66FDCC6DD988736A848_RuntimeMethod_var);
@@ -32657,7 +32917,7 @@ IL_0009_1:
 			}
 			{
 				// using (m_DeactivateEventArgs.Get(out var args))
-				LinkedPool_1_t0F5C109EA19EF35798DEF24B63645919D0B7B53B* L_6 = __this->___m_DeactivateEventArgs_87;
+				LinkedPool_1_t0F5C109EA19EF35798DEF24B63645919D0B7B53B* L_6 = __this->___m_DeactivateEventArgs_98;
 				NullCheck(L_6);
 				PooledObject_1_tDA0413D819B9EC5F0C972A8E3ADA3180FC917A3B L_7;
 				L_7 = LinkedPool_1_Get_m0BD5FB7CEE2761ACF29D5A94F929B83ED40AA025(L_6, (&V_2), LinkedPool_1_Get_m0BD5FB7CEE2761ACF29D5A94F929B83ED40AA025_RuntimeMethod_var);
@@ -32768,7 +33028,7 @@ IL_000a:
 IL_0014:
 	{
 		// switch (m_SelectActionTrigger)
-		int32_t L_2 = __this->___m_SelectActionTrigger_48;
+		int32_t L_2 = __this->___m_SelectActionTrigger_59;
 		V_0 = L_2;
 		int32_t L_3 = V_0;
 		switch (L_3)
@@ -32798,7 +33058,7 @@ IL_0014:
 IL_0036:
 	{
 		// return m_Controller != null && m_Controller.selectInteractionState.active;
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_4 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_4 = __this->___m_Controller_96;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
 		L_5 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_4, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -32808,7 +33068,7 @@ IL_0036:
 		}
 	}
 	{
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_6 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_6 = __this->___m_Controller_96;
 		NullCheck(L_6);
 		InteractionState_tA1AFAB17758E43BA3F654BEAD6A61A05992003AB L_7;
 		L_7 = XRBaseController_get_selectInteractionState_m607E98EBB0AA181459CF4165499F84BEFC49B53A_inline(L_6, NULL);
@@ -32827,7 +33087,7 @@ IL_005a:
 	{
 		// return (m_Controller != null && m_Controller.selectInteractionState.activatedThisFrame) ||
 		//     (hasSelection && m_Controller != null && !m_Controller.selectInteractionState.deactivatedThisFrame);
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_9 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_9 = __this->___m_Controller_96;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
 		L_10 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_9, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -32837,7 +33097,7 @@ IL_005a:
 		}
 	}
 	{
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_11 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_11 = __this->___m_Controller_96;
 		NullCheck(L_11);
 		InteractionState_tA1AFAB17758E43BA3F654BEAD6A61A05992003AB L_12;
 		L_12 = XRBaseController_get_selectInteractionState_m607E98EBB0AA181459CF4165499F84BEFC49B53A_inline(L_11, NULL);
@@ -32860,7 +33120,7 @@ IL_007d:
 		}
 	}
 	{
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_15 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_15 = __this->___m_Controller_96;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_16;
 		L_16 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_15, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -32870,7 +33130,7 @@ IL_007d:
 		}
 	}
 	{
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_17 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_17 = __this->___m_Controller_96;
 		NullCheck(L_17);
 		InteractionState_tA1AFAB17758E43BA3F654BEAD6A61A05992003AB L_18;
 		L_18 = XRBaseController_get_selectInteractionState_m607E98EBB0AA181459CF4165499F84BEFC49B53A_inline(L_17, NULL);
@@ -32894,14 +33154,14 @@ IL_00ae:
 	{
 		// return m_ToggleSelectActive ||
 		//     (m_Controller != null && m_Controller.selectInteractionState.activatedThisFrame && !m_ToggleSelectDeactivatedThisFrame);
-		bool L_20 = __this->___m_ToggleSelectActive_89;
+		bool L_20 = __this->___m_ToggleSelectActive_100;
 		if (L_20)
 		{
 			goto IL_00e5;
 		}
 	}
 	{
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_21 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_21 = __this->___m_Controller_96;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_22;
 		L_22 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_21, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -32911,7 +33171,7 @@ IL_00ae:
 		}
 	}
 	{
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_23 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_23 = __this->___m_Controller_96;
 		NullCheck(L_23);
 		InteractionState_tA1AFAB17758E43BA3F654BEAD6A61A05992003AB L_24;
 		L_24 = XRBaseController_get_selectInteractionState_m607E98EBB0AA181459CF4165499F84BEFC49B53A_inline(L_23, NULL);
@@ -32924,7 +33184,7 @@ IL_00ae:
 		}
 	}
 	{
-		bool L_26 = __this->___m_ToggleSelectDeactivatedThisFrame_90;
+		bool L_26 = __this->___m_ToggleSelectDeactivatedThisFrame_101;
 		return (bool)((((int32_t)L_26) == ((int32_t)0))? 1 : 0);
 	}
 
@@ -32942,21 +33202,21 @@ IL_00e7:
 	{
 		// return m_ToggleSelectActive || m_WaitingForSelectDeactivate ||
 		//     (m_Controller != null && m_Controller.selectInteractionState.activatedThisFrame);
-		bool L_27 = __this->___m_ToggleSelectActive_89;
+		bool L_27 = __this->___m_ToggleSelectActive_100;
 		if (L_27)
 		{
 			goto IL_011b;
 		}
 	}
 	{
-		bool L_28 = __this->___m_WaitingForSelectDeactivate_91;
+		bool L_28 = __this->___m_WaitingForSelectDeactivate_102;
 		if (L_28)
 		{
 			goto IL_011b;
 		}
 	}
 	{
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_29 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_29 = __this->___m_Controller_96;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_30;
 		L_30 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_29, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -32966,7 +33226,7 @@ IL_00e7:
 		}
 	}
 	{
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_31 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_31 = __this->___m_Controller_96;
 		NullCheck(L_31);
 		InteractionState_tA1AFAB17758E43BA3F654BEAD6A61A05992003AB L_32;
 		L_32 = XRBaseController_get_selectInteractionState_m607E98EBB0AA181459CF4165499F84BEFC49B53A_inline(L_31, NULL);
@@ -33005,7 +33265,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_isUISelec
 	memset((&V_0), 0, sizeof(V_0));
 	{
 		// protected bool isUISelectActive => m_Controller != null && m_Controller.uiPressInteractionState.active;
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_0 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_0 = __this->___m_Controller_96;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -33015,7 +33275,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_isUISelec
 		}
 	}
 	{
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_2 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_2 = __this->___m_Controller_96;
 		NullCheck(L_2);
 		InteractionState_tA1AFAB17758E43BA3F654BEAD6A61A05992003AB L_3;
 		L_3 = XRBaseController_get_uiPressInteractionState_mB07F0309336EA4A99D5FD150A6FD76A7F6FA417F_inline(L_2, NULL);
@@ -33043,7 +33303,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_shouldAct
 	memset((&V_0), 0, sizeof(V_0));
 	{
 		// m_AllowActivate && (hasSelection || m_AllowHoveredActivate && hasHover) && m_Controller != null && m_Controller.activateInteractionState.activatedThisFrame;
-		bool L_0 = __this->___m_AllowActivate_84;
+		bool L_0 = __this->___m_AllowActivate_95;
 		if (!L_0)
 		{
 			goto IL_0042;
@@ -33058,7 +33318,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_shouldAct
 		}
 	}
 	{
-		bool L_2 = __this->___m_AllowHoveredActivate_50;
+		bool L_2 = __this->___m_AllowHoveredActivate_61;
 		if (!L_2)
 		{
 			goto IL_0042;
@@ -33075,7 +33335,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_shouldAct
 
 IL_0020:
 	{
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_4 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_4 = __this->___m_Controller_96;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
 		L_5 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_4, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -33085,7 +33345,7 @@ IL_0020:
 		}
 	}
 	{
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_6 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_6 = __this->___m_Controller_96;
 		NullCheck(L_6);
 		InteractionState_tA1AFAB17758E43BA3F654BEAD6A61A05992003AB L_7;
 		L_7 = XRBaseController_get_activateInteractionState_m93E7F1F64049D215C2CCDB11C0567D07C349DC41_inline(L_6, NULL);
@@ -33113,7 +33373,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_shouldDea
 	memset((&V_0), 0, sizeof(V_0));
 	{
 		// m_AllowActivate && (hasSelection || m_AllowHoveredActivate && hasHover) && m_Controller != null && m_Controller.activateInteractionState.deactivatedThisFrame;
-		bool L_0 = __this->___m_AllowActivate_84;
+		bool L_0 = __this->___m_AllowActivate_95;
 		if (!L_0)
 		{
 			goto IL_0042;
@@ -33128,7 +33388,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_shouldDea
 		}
 	}
 	{
-		bool L_2 = __this->___m_AllowHoveredActivate_50;
+		bool L_2 = __this->___m_AllowHoveredActivate_61;
 		if (!L_2)
 		{
 			goto IL_0042;
@@ -33145,7 +33405,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_get_shouldDea
 
 IL_0020:
 	{
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_4 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_4 = __this->___m_Controller_96;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
 		L_5 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_4, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -33155,7 +33415,7 @@ IL_0020:
 		}
 	}
 	{
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_6 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_6 = __this->___m_Controller_96;
 		NullCheck(L_6);
 		InteractionState_tA1AFAB17758E43BA3F654BEAD6A61A05992003AB L_7;
 		L_7 = XRBaseController_get_activateInteractionState_m93E7F1F64049D215C2CCDB11C0567D07C349DC41_inline(L_6, NULL);
@@ -33277,7 +33537,7 @@ IL_0033_1:
 IL_004c:
 	{
 		// else if (m_AllowHoveredActivate && hasHover)
-		bool L_9 = __this->___m_AllowHoveredActivate_50;
+		bool L_9 = __this->___m_AllowHoveredActivate_61;
 		if (!L_9)
 		{
 			goto IL_009a;
@@ -33373,7 +33633,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_OnSelectEnter
 		// HandleSelecting();
 		XRBaseControllerInteractor_HandleSelecting_mEE385E75B21EB5525DCAF6CD7FB476DC1DD6BE48(__this, NULL);
 		// if (m_PlayHapticsOnSelectEntered)
-		bool L_1 = __this->___m_PlayHapticsOnSelectEntered_65;
+		bool L_1 = __this->___m_PlayHapticsOnSelectEntered_76;
 		if (!L_1)
 		{
 			goto IL_0028;
@@ -33381,8 +33641,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_OnSelectEnter
 	}
 	{
 		// SendHapticImpulse(m_HapticSelectEnterIntensity, m_HapticSelectEnterDuration);
-		float L_2 = __this->___m_HapticSelectEnterIntensity_66;
-		float L_3 = __this->___m_HapticSelectEnterDuration_67;
+		float L_2 = __this->___m_HapticSelectEnterIntensity_77;
+		float L_3 = __this->___m_HapticSelectEnterDuration_78;
 		bool L_4;
 		L_4 = XRBaseControllerInteractor_SendHapticImpulse_m3FB94421656EEEFB493079ECF9A835ED76A16FFF(__this, L_2, L_3, NULL);
 	}
@@ -33390,7 +33650,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_OnSelectEnter
 IL_0028:
 	{
 		// if (m_PlayAudioClipOnSelectEntered)
-		bool L_5 = __this->___m_PlayAudioClipOnSelectEntered_52;
+		bool L_5 = __this->___m_PlayAudioClipOnSelectEntered_63;
 		if (!L_5)
 		{
 			goto IL_003c;
@@ -33398,7 +33658,7 @@ IL_0028:
 	}
 	{
 		// PlayAudio(m_AudioClipForOnSelectEntered);
-		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_6 = __this->___m_AudioClipForOnSelectEntered_53;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_6 = __this->___m_AudioClipForOnSelectEntered_64;
 		VirtualActionInvoker1< AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* >::Invoke(101 /* System.Void UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::PlayAudio(UnityEngine.AudioClip) */, __this, L_6);
 	}
 
@@ -33429,7 +33689,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_OnSelectExiti
 	}
 	{
 		// if (m_PlayHapticsOnSelectCanceled)
-		bool L_3 = __this->___m_PlayHapticsOnSelectCanceled_71;
+		bool L_3 = __this->___m_PlayHapticsOnSelectCanceled_82;
 		if (!L_3)
 		{
 			goto IL_0030;
@@ -33437,8 +33697,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_OnSelectExiti
 	}
 	{
 		// SendHapticImpulse(m_HapticSelectCancelIntensity, m_HapticSelectCancelDuration);
-		float L_4 = __this->___m_HapticSelectCancelIntensity_72;
-		float L_5 = __this->___m_HapticSelectCancelDuration_73;
+		float L_4 = __this->___m_HapticSelectCancelIntensity_83;
+		float L_5 = __this->___m_HapticSelectCancelDuration_84;
 		bool L_6;
 		L_6 = XRBaseControllerInteractor_SendHapticImpulse_m3FB94421656EEEFB493079ECF9A835ED76A16FFF(__this, L_4, L_5, NULL);
 	}
@@ -33446,7 +33706,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_OnSelectExiti
 IL_0030:
 	{
 		// if (m_PlayAudioClipOnSelectCanceled)
-		bool L_7 = __this->___m_PlayAudioClipOnSelectCanceled_56;
+		bool L_7 = __this->___m_PlayAudioClipOnSelectCanceled_67;
 		if (!L_7)
 		{
 			goto IL_0074;
@@ -33454,7 +33714,7 @@ IL_0030:
 	}
 	{
 		// PlayAudio(m_AudioClipForOnSelectCanceled);
-		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_8 = __this->___m_AudioClipForOnSelectCanceled_57;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_8 = __this->___m_AudioClipForOnSelectCanceled_68;
 		VirtualActionInvoker1< AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* >::Invoke(101 /* System.Void UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::PlayAudio(UnityEngine.AudioClip) */, __this, L_8);
 		return;
 	}
@@ -33462,7 +33722,7 @@ IL_0030:
 IL_0045:
 	{
 		// if (m_PlayHapticsOnSelectExited)
-		bool L_9 = __this->___m_PlayHapticsOnSelectExited_68;
+		bool L_9 = __this->___m_PlayHapticsOnSelectExited_79;
 		if (!L_9)
 		{
 			goto IL_0060;
@@ -33470,8 +33730,8 @@ IL_0045:
 	}
 	{
 		// SendHapticImpulse(m_HapticSelectExitIntensity, m_HapticSelectExitDuration);
-		float L_10 = __this->___m_HapticSelectExitIntensity_69;
-		float L_11 = __this->___m_HapticSelectExitDuration_70;
+		float L_10 = __this->___m_HapticSelectExitIntensity_80;
+		float L_11 = __this->___m_HapticSelectExitDuration_81;
 		bool L_12;
 		L_12 = XRBaseControllerInteractor_SendHapticImpulse_m3FB94421656EEEFB493079ECF9A835ED76A16FFF(__this, L_10, L_11, NULL);
 	}
@@ -33479,7 +33739,7 @@ IL_0045:
 IL_0060:
 	{
 		// if (m_PlayAudioClipOnSelectExited)
-		bool L_13 = __this->___m_PlayAudioClipOnSelectExited_54;
+		bool L_13 = __this->___m_PlayAudioClipOnSelectExited_65;
 		if (!L_13)
 		{
 			goto IL_0074;
@@ -33487,7 +33747,7 @@ IL_0060:
 	}
 	{
 		// PlayAudio(m_AudioClipForOnSelectExited);
-		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_14 = __this->___m_AudioClipForOnSelectExited_55;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_14 = __this->___m_AudioClipForOnSelectExited_66;
 		VirtualActionInvoker1< AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* >::Invoke(101 /* System.Void UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::PlayAudio(UnityEngine.AudioClip) */, __this, L_14);
 	}
 
@@ -33512,7 +33772,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_OnHoverEnteri
 		L_2 = HoverEnterEventArgs_get_interactableObject_mF3402C9ABF2BBFBABE7847BD3F97DA76DBB047E0(L_1, NULL);
 		V_0 = L_2;
 		// if (m_PlayHapticsOnHoverEntered && CanPlayHoverHaptics(hoveredInteractable))
-		bool L_3 = __this->___m_PlayHapticsOnHoverEntered_74;
+		bool L_3 = __this->___m_PlayHapticsOnHoverEntered_85;
 		if (!L_3)
 		{
 			goto IL_0032;
@@ -33529,8 +33789,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_OnHoverEnteri
 	}
 	{
 		// SendHapticImpulse(m_HapticHoverEnterIntensity, m_HapticHoverEnterDuration);
-		float L_6 = __this->___m_HapticHoverEnterIntensity_75;
-		float L_7 = __this->___m_HapticHoverEnterDuration_76;
+		float L_6 = __this->___m_HapticHoverEnterIntensity_86;
+		float L_7 = __this->___m_HapticHoverEnterDuration_87;
 		bool L_8;
 		L_8 = XRBaseControllerInteractor_SendHapticImpulse_m3FB94421656EEEFB493079ECF9A835ED76A16FFF(__this, L_6, L_7, NULL);
 	}
@@ -33538,7 +33798,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_OnHoverEnteri
 IL_0032:
 	{
 		// if (m_PlayAudioClipOnHoverEntered && CanPlayHoverAudio(hoveredInteractable))
-		bool L_9 = __this->___m_PlayAudioClipOnHoverEntered_58;
+		bool L_9 = __this->___m_PlayAudioClipOnHoverEntered_69;
 		if (!L_9)
 		{
 			goto IL_004f;
@@ -33555,7 +33815,7 @@ IL_0032:
 	}
 	{
 		// PlayAudio(m_AudioClipForOnHoverEntered);
-		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_12 = __this->___m_AudioClipForOnHoverEntered_59;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_12 = __this->___m_AudioClipForOnHoverEntered_70;
 		VirtualActionInvoker1< AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* >::Invoke(101 /* System.Void UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::PlayAudio(UnityEngine.AudioClip) */, __this, L_12);
 	}
 
@@ -33591,7 +33851,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_OnHoverExitin
 	}
 	{
 		// if (m_PlayHapticsOnHoverCanceled && CanPlayHoverHaptics(hoveredInteractable))
-		bool L_5 = __this->___m_PlayHapticsOnHoverCanceled_80;
+		bool L_5 = __this->___m_PlayHapticsOnHoverCanceled_91;
 		if (!L_5)
 		{
 			goto IL_003a;
@@ -33608,8 +33868,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_OnHoverExitin
 	}
 	{
 		// SendHapticImpulse(m_HapticHoverCancelIntensity, m_HapticHoverCancelDuration);
-		float L_8 = __this->___m_HapticHoverCancelIntensity_81;
-		float L_9 = __this->___m_HapticHoverCancelDuration_82;
+		float L_8 = __this->___m_HapticHoverCancelIntensity_92;
+		float L_9 = __this->___m_HapticHoverCancelDuration_93;
 		bool L_10;
 		L_10 = XRBaseControllerInteractor_SendHapticImpulse_m3FB94421656EEEFB493079ECF9A835ED76A16FFF(__this, L_8, L_9, NULL);
 	}
@@ -33617,7 +33877,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_OnHoverExitin
 IL_003a:
 	{
 		// if (m_PlayAudioClipOnHoverCanceled && CanPlayHoverAudio(hoveredInteractable))
-		bool L_11 = __this->___m_PlayAudioClipOnHoverCanceled_62;
+		bool L_11 = __this->___m_PlayAudioClipOnHoverCanceled_73;
 		if (!L_11)
 		{
 			goto IL_0099;
@@ -33634,7 +33894,7 @@ IL_003a:
 	}
 	{
 		// PlayAudio(m_AudioClipForOnHoverCanceled);
-		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_14 = __this->___m_AudioClipForOnHoverCanceled_63;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_14 = __this->___m_AudioClipForOnHoverCanceled_74;
 		VirtualActionInvoker1< AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* >::Invoke(101 /* System.Void UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::PlayAudio(UnityEngine.AudioClip) */, __this, L_14);
 		return;
 	}
@@ -33642,7 +33902,7 @@ IL_003a:
 IL_0058:
 	{
 		// if (m_PlayHapticsOnHoverExited && CanPlayHoverHaptics(hoveredInteractable))
-		bool L_15 = __this->___m_PlayHapticsOnHoverExited_77;
+		bool L_15 = __this->___m_PlayHapticsOnHoverExited_88;
 		if (!L_15)
 		{
 			goto IL_007c;
@@ -33659,8 +33919,8 @@ IL_0058:
 	}
 	{
 		// SendHapticImpulse(m_HapticHoverExitIntensity, m_HapticHoverExitDuration);
-		float L_18 = __this->___m_HapticHoverExitIntensity_78;
-		float L_19 = __this->___m_HapticHoverExitDuration_79;
+		float L_18 = __this->___m_HapticHoverExitIntensity_89;
+		float L_19 = __this->___m_HapticHoverExitDuration_90;
 		bool L_20;
 		L_20 = XRBaseControllerInteractor_SendHapticImpulse_m3FB94421656EEEFB493079ECF9A835ED76A16FFF(__this, L_18, L_19, NULL);
 	}
@@ -33668,7 +33928,7 @@ IL_0058:
 IL_007c:
 	{
 		// if (m_PlayAudioClipOnHoverExited && CanPlayHoverAudio(hoveredInteractable))
-		bool L_21 = __this->___m_PlayAudioClipOnHoverExited_60;
+		bool L_21 = __this->___m_PlayAudioClipOnHoverExited_71;
 		if (!L_21)
 		{
 			goto IL_0099;
@@ -33685,7 +33945,7 @@ IL_007c:
 	}
 	{
 		// PlayAudio(m_AudioClipForOnHoverExited);
-		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_24 = __this->___m_AudioClipForOnHoverExited_61;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_24 = __this->___m_AudioClipForOnHoverExited_72;
 		VirtualActionInvoker1< AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* >::Invoke(101 /* System.Void UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor::PlayAudio(UnityEngine.AudioClip) */, __this, L_24);
 	}
 
@@ -33700,7 +33960,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_CanPlayHoverA
 {
 	{
 		// return m_AllowHoverAudioWhileSelecting || !IsSelecting(hoveredInteractable);
-		bool L_0 = __this->___m_AllowHoverAudioWhileSelecting_64;
+		bool L_0 = __this->___m_AllowHoverAudioWhileSelecting_75;
 		if (L_0)
 		{
 			goto IL_0013;
@@ -33723,7 +33983,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_CanPlayHoverH
 {
 	{
 		// return m_AllowHoverHapticsWhileSelecting || !IsSelecting(hoveredInteractable);
-		bool L_0 = __this->___m_AllowHoverHapticsWhileSelecting_83;
+		bool L_0 = __this->___m_AllowHoverHapticsWhileSelecting_94;
 		if (L_0)
 		{
 			goto IL_0013;
@@ -33752,7 +34012,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_SendHapticImp
 	}
 	{
 		// return m_Controller != null && m_Controller.SendHapticImpulse(amplitude, duration);
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_0 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_0 = __this->___m_Controller_96;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -33762,7 +34022,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_SendHapticImp
 		}
 	}
 	{
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_2 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_2 = __this->___m_Controller_96;
 		float L_3 = ___amplitude0;
 		float L_4 = ___duration1;
 		NullCheck(L_2);
@@ -33804,7 +34064,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_PlayAudio_m81
 IL_000a:
 	{
 		// if (m_EffectsAudioSource == null)
-		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_2 = __this->___m_EffectsAudioSource_92;
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_2 = __this->___m_EffectsAudioSource_103;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
 		L_3 = Object_op_Equality_mD3DB0D72CE0250C84033DC2A90AEF9D59896E536(L_2, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -33821,7 +34081,7 @@ IL_000a:
 IL_001e:
 	{
 		// m_EffectsAudioSource.PlayOneShot(audioClip);
-		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_4 = __this->___m_EffectsAudioSource_92;
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_4 = __this->___m_EffectsAudioSource_103;
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_5 = ___audioClip0;
 		NullCheck(L_4);
 		AudioSource_PlayOneShot_m098BCAE084AABB128BB19ED805D2D985E7B75112(L_4, L_5, NULL);
@@ -33845,14 +34105,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_CreateEffects
 		NullCheck(L_0);
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_1;
 		L_1 = GameObject_AddComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m0E8EFDB9B3D8DF1ADE10C56D3168A9C1BA19BF14(L_0, GameObject_AddComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m0E8EFDB9B3D8DF1ADE10C56D3168A9C1BA19BF14_RuntimeMethod_var);
-		__this->___m_EffectsAudioSource_92 = L_1;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_EffectsAudioSource_92), (void*)L_1);
+		__this->___m_EffectsAudioSource_103 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_EffectsAudioSource_103), (void*)L_1);
 		// m_EffectsAudioSource.loop = false;
-		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_2 = __this->___m_EffectsAudioSource_92;
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_2 = __this->___m_EffectsAudioSource_103;
 		NullCheck(L_2);
 		AudioSource_set_loop_m834A590939D8456008C0F897FD80B0ECFFB7FE56(L_2, (bool)0, NULL);
 		// m_EffectsAudioSource.playOnAwake = false;
-		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_3 = __this->___m_EffectsAudioSource_92;
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_3 = __this->___m_EffectsAudioSource_103;
 		NullCheck(L_3);
 		AudioSource_set_playOnAwake_m7EACC6ECEF12D7BA86A4E5A53603F1C8F9E11949(L_3, (bool)0, NULL);
 		// }
@@ -33870,18 +34130,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_HandleSelecti
 	}
 	{
 		// m_ToggleSelectActive = true;
-		__this->___m_ToggleSelectActive_89 = (bool)1;
+		__this->___m_ToggleSelectActive_100 = (bool)1;
 		// m_WaitingForSelectDeactivate = false;
-		__this->___m_WaitingForSelectDeactivate_91 = (bool)0;
+		__this->___m_WaitingForSelectDeactivate_102 = (bool)0;
 		// if (m_HideControllerOnSelect && m_Controller != null)
-		bool L_0 = __this->___m_HideControllerOnSelect_49;
+		bool L_0 = __this->___m_HideControllerOnSelect_60;
 		if (!L_0)
 		{
 			goto IL_0030;
 		}
 	}
 	{
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_1 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_1 = __this->___m_Controller_96;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_1, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -33892,7 +34152,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_HandleSelecti
 	}
 	{
 		// m_Controller.hideControllerModel = true;
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_3 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_3 = __this->___m_Controller_96;
 		NullCheck(L_3);
 		XRBaseController_set_hideControllerModel_mC89F417807EF5C8E4D787AE69746FF81B1C3EF3A(L_3, (bool)1, NULL);
 	}
@@ -33929,11 +34189,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_HandleDeselec
 IL_0009:
 	{
 		// m_ToggleSelectActive = false;
-		__this->___m_ToggleSelectActive_89 = (bool)0;
+		__this->___m_ToggleSelectActive_100 = (bool)0;
 		// m_WaitingForSelectDeactivate = false;
-		__this->___m_WaitingForSelectDeactivate_91 = (bool)0;
+		__this->___m_WaitingForSelectDeactivate_102 = (bool)0;
 		// if (m_Controller != null)
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_1 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_1 = __this->___m_Controller_96;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_1, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -33944,7 +34204,7 @@ IL_0009:
 	}
 	{
 		// m_Controller.hideControllerModel = false;
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_3 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_3 = __this->___m_Controller_96;
 		NullCheck(L_3);
 		XRBaseController_set_hideControllerModel_mC89F417807EF5C8E4D787AE69746FF81B1C3EF3A(L_3, (bool)0, NULL);
 	}
@@ -34150,7 +34410,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t02510C493B34D49F210C22C40442D863A0850
 {
 	{
 		// protected virtual List<XRBaseInteractable> validTargets { get; } = new List<XRBaseInteractable>();
-		List_1_t02510C493B34D49F210C22C40442D863A08509CB* L_0 = __this->___U3CvalidTargetsU3Ek__BackingField_93;
+		List_1_t02510C493B34D49F210C22C40442D863A08509CB* L_0 = __this->___U3CvalidTargetsU3Ek__BackingField_104;
 		return L_0;
 	}
 }
@@ -34184,13 +34444,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor__ctor_m3389EC
 	XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E* G_B3_1 = NULL;
 	{
 		// InputTriggerType m_SelectActionTrigger = InputTriggerType.StateChange;
-		__this->___m_SelectActionTrigger_48 = 1;
+		__this->___m_SelectActionTrigger_59 = 1;
 		// bool m_AllowHoverAudioWhileSelecting = true;
-		__this->___m_AllowHoverAudioWhileSelecting_64 = (bool)1;
+		__this->___m_AllowHoverAudioWhileSelecting_75 = (bool)1;
 		// bool m_AllowHoverHapticsWhileSelecting = true;
-		__this->___m_AllowHoverHapticsWhileSelecting_83 = (bool)1;
+		__this->___m_AllowHoverHapticsWhileSelecting_94 = (bool)1;
 		// bool m_AllowActivate = true;
-		__this->___m_AllowActivate_84 = (bool)1;
+		__this->___m_AllowActivate_95 = (bool)1;
 		// readonly LinkedPool<ActivateEventArgs> m_ActivateEventArgs = new LinkedPool<ActivateEventArgs>(() => new ActivateEventArgs(), collectionCheck: false);
 		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_t40FC8C1CC92599264618EB2016E3897CB74036FC_il2cpp_TypeInfo_var);
 		Func_1_t95201ED71423A006746376C124FEA59196498D15* L_0 = ((U3CU3Ec_t40FC8C1CC92599264618EB2016E3897CB74036FC_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t40FC8C1CC92599264618EB2016E3897CB74036FC_il2cpp_TypeInfo_var))->___U3CU3E9__223_0_1;
@@ -34223,8 +34483,8 @@ IL_003c:
 		NullCheck(L_5);
 		LinkedPool_1__ctor_mD78D38A23F70601F8FB94B8F2C7DDE689C4F59C9(L_5, G_B2_0, (Action_1_tDDFE4A9ED026ECF1B8AF2146F86F9F15A2AE233B*)NULL, (Action_1_tDDFE4A9ED026ECF1B8AF2146F86F9F15A2AE233B*)NULL, (Action_1_tDDFE4A9ED026ECF1B8AF2146F86F9F15A2AE233B*)NULL, (bool)0, ((int32_t)10000), LinkedPool_1__ctor_mD78D38A23F70601F8FB94B8F2C7DDE689C4F59C9_RuntimeMethod_var);
 		NullCheck(G_B2_1);
-		G_B2_1->___m_ActivateEventArgs_86 = L_5;
-		Il2CppCodeGenWriteBarrier((void**)(&G_B2_1->___m_ActivateEventArgs_86), (void*)L_5);
+		G_B2_1->___m_ActivateEventArgs_97 = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&G_B2_1->___m_ActivateEventArgs_97), (void*)L_5);
 		// readonly LinkedPool<DeactivateEventArgs> m_DeactivateEventArgs = new LinkedPool<DeactivateEventArgs>(() => new DeactivateEventArgs(), collectionCheck: false);
 		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_t40FC8C1CC92599264618EB2016E3897CB74036FC_il2cpp_TypeInfo_var);
 		Func_1_t7C7E609407FD5F0AA88C25C34AC29798CBADFD8B* L_6 = ((U3CU3Ec_t40FC8C1CC92599264618EB2016E3897CB74036FC_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t40FC8C1CC92599264618EB2016E3897CB74036FC_il2cpp_TypeInfo_var))->___U3CU3E9__223_1_2;
@@ -34257,14 +34517,14 @@ IL_006f:
 		NullCheck(L_11);
 		LinkedPool_1__ctor_m46292689CB391CADD3A9ED2D675B90F042DE56DB(L_11, G_B4_0, (Action_1_tF1DD53C914CB2C4383A9AC83BB9AAE8B880AAED4*)NULL, (Action_1_tF1DD53C914CB2C4383A9AC83BB9AAE8B880AAED4*)NULL, (Action_1_tF1DD53C914CB2C4383A9AC83BB9AAE8B880AAED4*)NULL, (bool)0, ((int32_t)10000), LinkedPool_1__ctor_m46292689CB391CADD3A9ED2D675B90F042DE56DB_RuntimeMethod_var);
 		NullCheck(G_B4_1);
-		G_B4_1->___m_DeactivateEventArgs_87 = L_11;
-		Il2CppCodeGenWriteBarrier((void**)(&G_B4_1->___m_DeactivateEventArgs_87), (void*)L_11);
+		G_B4_1->___m_DeactivateEventArgs_98 = L_11;
+		Il2CppCodeGenWriteBarrier((void**)(&G_B4_1->___m_DeactivateEventArgs_98), (void*)L_11);
 		// protected virtual List<XRBaseInteractable> validTargets { get; } = new List<XRBaseInteractable>();
 		List_1_t02510C493B34D49F210C22C40442D863A08509CB* L_12 = (List_1_t02510C493B34D49F210C22C40442D863A08509CB*)il2cpp_codegen_object_new(List_1_t02510C493B34D49F210C22C40442D863A08509CB_il2cpp_TypeInfo_var);
 		NullCheck(L_12);
 		List_1__ctor_m5E0E87678A3837CA7E7B32D1DC89E510829A97C4(L_12, List_1__ctor_m5E0E87678A3837CA7E7B32D1DC89E510829A97C4_RuntimeMethod_var);
-		__this->___U3CvalidTargetsU3Ek__BackingField_93 = L_12;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CvalidTargetsU3Ek__BackingField_93), (void*)L_12);
+		__this->___U3CvalidTargetsU3Ek__BackingField_104 = L_12;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CvalidTargetsU3Ek__BackingField_104), (void*)L_12);
 		il2cpp_codegen_runtime_class_init_inline(XRBaseInteractor_tB48889E8D95695ABF46D2012EC55EA660103D158_il2cpp_TypeInfo_var);
 		XRBaseInteractor__ctor_mCEB69DD262DE1CF1951979855AFC2FEEC41806FE(__this, NULL);
 		return;
@@ -34286,8 +34546,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRBaseControllerInteractor__cctor_m1AFAC
 		List_1_tAB2FD3FF9900A585A26C6DC2D8EE94D30F2AECCA* L_0 = (List_1_tAB2FD3FF9900A585A26C6DC2D8EE94D30F2AECCA*)il2cpp_codegen_object_new(List_1_tAB2FD3FF9900A585A26C6DC2D8EE94D30F2AECCA_il2cpp_TypeInfo_var);
 		NullCheck(L_0);
 		List_1__ctor_mDCD4D0A69DBCCCF03158CEDFF3F8290B5FF0B7C2(L_0, List_1__ctor_mDCD4D0A69DBCCCF03158CEDFF3F8290B5FF0B7C2_RuntimeMethod_var);
-		((XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_StaticFields*)il2cpp_codegen_static_fields_for(XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_il2cpp_TypeInfo_var))->___s_ActivateTargets_88 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&((XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_StaticFields*)il2cpp_codegen_static_fields_for(XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_il2cpp_TypeInfo_var))->___s_ActivateTargets_88), (void*)L_0);
+		((XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_StaticFields*)il2cpp_codegen_static_fields_for(XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_il2cpp_TypeInfo_var))->___s_ActivateTargets_99 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_StaticFields*)il2cpp_codegen_static_fields_for(XRBaseControllerInteractor_t718A447F8F3D646B51B42E1FAFEA2C1A1EF1C66E_il2cpp_TypeInfo_var))->___s_ActivateTargets_99), (void*)L_0);
 		return;
 	}
 }
@@ -34411,14 +34671,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A
 	{
 		// get => m_ModelParent;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___m_ModelParent_8;
-		return L_0;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t XRController_get_controllerNode_m84357B5F8DB7E0E61C12C8E89BC0F8CEBE1B0ED4_inline (XRController_t928E104C899E51FDE12C0A8AC68874587C46C28F* __this, const RuntimeMethod* method) 
-{
-	{
-		// get => m_ControllerNode;
-		int32_t L_0 = __this->___m_ControllerNode_24;
 		return L_0;
 	}
 }
@@ -34826,7 +35078,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRBaseController_t44C1BB30A7E1D27
 {
 	{
 		// get => m_Controller;
-		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_0 = __this->___m_Controller_85;
+		XRBaseController_t44C1BB30A7E1D279DD2508F34D3352B33A9AD60C* L_0 = __this->___m_Controller_96;
 		return L_0;
 	}
 }
@@ -35139,7 +35391,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XRRayInteractor_get_useForce
 {
 	{
 		// get => m_UseForceGrab;
-		bool L_0 = __this->___m_UseForceGrab_124;
+		bool L_0 = __this->___m_UseForceGrab_135;
 		return L_0;
 	}
 }
@@ -35626,6 +35878,14 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A
 		return L_0;
 	}
 }
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* XRRayInteractor_get_rayOriginTransform_m1E25B9D203ABF076A179802DC530B2A3137232F2_inline (XRRayInteractor_t0B25C1D5A938B199A71908E189AB351B43DA4C76* __this, const RuntimeMethod* method) 
+{
+	{
+		// get => m_RayOriginTransform;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___m_RayOriginTransform_112;
+		return L_0;
+	}
+}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_SmoothDamp_m017722BD53BAE32893C2A1B674746E340D4A5B89_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___current0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___target1, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___currentVelocity2, float ___smoothTime3, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -35675,6 +35935,131 @@ IL_0009:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = V_0;
 		return L_1;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Mathf_Approximately_m1C8DD0BB6A2D22A7DCF09AD7F8EE9ABD12D3F620_inline (float ___a0, float ___b1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Mathf_tE284D016E3B297B72311AAD9EB8F0E643F6A4682_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		float L_0 = ___b1;
+		float L_1 = ___a0;
+		float L_2;
+		L_2 = fabsf(((float)il2cpp_codegen_subtract(L_0, L_1)));
+		float L_3 = ___a0;
+		float L_4;
+		L_4 = fabsf(L_3);
+		float L_5 = ___b1;
+		float L_6;
+		L_6 = fabsf(L_5);
+		float L_7;
+		L_7 = Mathf_Max_mA9DCA91E87D6D27034F56ABA52606A9090406016_inline(L_4, L_6, NULL);
+		float L_8 = ((Mathf_tE284D016E3B297B72311AAD9EB8F0E643F6A4682_StaticFields*)il2cpp_codegen_static_fields_for(Mathf_tE284D016E3B297B72311AAD9EB8F0E643F6A4682_il2cpp_TypeInfo_var))->___Epsilon_0;
+		float L_9;
+		L_9 = Mathf_Max_mA9DCA91E87D6D27034F56ABA52606A9090406016_inline(((float)il2cpp_codegen_multiply((9.99999997E-07f), L_7)), ((float)il2cpp_codegen_multiply(L_8, (8.0f))), NULL);
+		V_0 = (bool)((((float)L_2) < ((float)L_9))? 1 : 0);
+		goto IL_0035;
+	}
+
+IL_0035:
+	{
+		bool L_10 = V_0;
+		return L_10;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_ProjectOnPlane_mCAFA9F9416EA4740DCA8757B6E52260BF536770A_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___vector0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___planeNormal1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Mathf_tE284D016E3B297B72311AAD9EB8F0E643F6A4682_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	bool V_1 = false;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	float V_3 = 0.0f;
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___planeNormal1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = ___planeNormal1;
+		float L_2;
+		L_2 = Vector3_Dot_m4688A1A524306675DBDB1E6D483F35E85E3CE6D8_inline(L_0, L_1, NULL);
+		V_0 = L_2;
+		float L_3 = V_0;
+		float L_4 = ((Mathf_tE284D016E3B297B72311AAD9EB8F0E643F6A4682_StaticFields*)il2cpp_codegen_static_fields_for(Mathf_tE284D016E3B297B72311AAD9EB8F0E643F6A4682_il2cpp_TypeInfo_var))->___Epsilon_0;
+		V_1 = (bool)((((float)L_3) < ((float)L_4))? 1 : 0);
+		bool L_5 = V_1;
+		if (!L_5)
+		{
+			goto IL_0019;
+		}
+	}
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___vector0;
+		V_2 = L_6;
+		goto IL_005d;
+	}
+
+IL_0019:
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7 = ___vector0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = ___planeNormal1;
+		float L_9;
+		L_9 = Vector3_Dot_m4688A1A524306675DBDB1E6D483F35E85E3CE6D8_inline(L_7, L_8, NULL);
+		V_3 = L_9;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___vector0;
+		float L_11 = L_10.___x_2;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = ___planeNormal1;
+		float L_13 = L_12.___x_2;
+		float L_14 = V_3;
+		float L_15 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16 = ___vector0;
+		float L_17 = L_16.___y_3;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18 = ___planeNormal1;
+		float L_19 = L_18.___y_3;
+		float L_20 = V_3;
+		float L_21 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22 = ___vector0;
+		float L_23 = L_22.___z_4;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24 = ___planeNormal1;
+		float L_25 = L_24.___z_4;
+		float L_26 = V_3;
+		float L_27 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_28;
+		memset((&L_28), 0, sizeof(L_28));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_28), ((float)il2cpp_codegen_subtract(L_11, ((float)(((float)il2cpp_codegen_multiply(L_13, L_14))/L_15)))), ((float)il2cpp_codegen_subtract(L_17, ((float)(((float)il2cpp_codegen_multiply(L_19, L_20))/L_21)))), ((float)il2cpp_codegen_subtract(L_23, ((float)(((float)il2cpp_codegen_multiply(L_25, L_26))/L_27)))), /*hidden argument*/NULL);
+		V_2 = L_28;
+		goto IL_005d;
+	}
+
+IL_005d:
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_29 = V_2;
+		return L_29;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Inequality_m6A7FB1C9E9DE194708997BFA24C6E238D92D908E_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___lhs0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___rhs1, const RuntimeMethod* method) 
+{
+	bool V_0 = false;
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___lhs0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = ___rhs1;
+		bool L_2;
+		L_2 = Vector3_op_Equality_m15951D1B53E3BE36C9D265E229090020FBD72EBB_inline(L_0, L_1, NULL);
+		V_0 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		bool L_3 = V_0;
+		return L_3;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) 
@@ -35747,7 +36132,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_g
 {
 	{
 		// get => m_PlayAudioClipOnSelectEntered;
-		bool L_0 = __this->___m_PlayAudioClipOnSelectEntered_52;
+		bool L_0 = __this->___m_PlayAudioClipOnSelectEntered_63;
 		return L_0;
 	}
 }
@@ -35755,7 +36140,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AudioClip_t5D272C4EB4F2D3ED49F1C3
 {
 	{
 		// get => m_AudioClipForOnSelectEntered;
-		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___m_AudioClipForOnSelectEntered_53;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___m_AudioClipForOnSelectEntered_64;
 		return L_0;
 	}
 }
@@ -35764,8 +36149,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_s
 	{
 		// set => m_AudioClipForOnSelectEntered = value;
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = ___value0;
-		__this->___m_AudioClipForOnSelectEntered_53 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AudioClipForOnSelectEntered_53), (void*)L_0);
+		__this->___m_AudioClipForOnSelectEntered_64 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AudioClipForOnSelectEntered_64), (void*)L_0);
 		return;
 	}
 }
@@ -35773,7 +36158,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_g
 {
 	{
 		// get => m_PlayAudioClipOnSelectExited;
-		bool L_0 = __this->___m_PlayAudioClipOnSelectExited_54;
+		bool L_0 = __this->___m_PlayAudioClipOnSelectExited_65;
 		return L_0;
 	}
 }
@@ -35781,7 +36166,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AudioClip_t5D272C4EB4F2D3ED49F1C3
 {
 	{
 		// get => m_AudioClipForOnSelectExited;
-		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___m_AudioClipForOnSelectExited_55;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___m_AudioClipForOnSelectExited_66;
 		return L_0;
 	}
 }
@@ -35790,8 +36175,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_s
 	{
 		// set => m_AudioClipForOnSelectExited = value;
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = ___value0;
-		__this->___m_AudioClipForOnSelectExited_55 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AudioClipForOnSelectExited_55), (void*)L_0);
+		__this->___m_AudioClipForOnSelectExited_66 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AudioClipForOnSelectExited_66), (void*)L_0);
 		return;
 	}
 }
@@ -35799,7 +36184,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_g
 {
 	{
 		// get => m_PlayAudioClipOnHoverEntered;
-		bool L_0 = __this->___m_PlayAudioClipOnHoverEntered_58;
+		bool L_0 = __this->___m_PlayAudioClipOnHoverEntered_69;
 		return L_0;
 	}
 }
@@ -35807,7 +36192,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AudioClip_t5D272C4EB4F2D3ED49F1C3
 {
 	{
 		// get => m_AudioClipForOnHoverEntered;
-		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___m_AudioClipForOnHoverEntered_59;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___m_AudioClipForOnHoverEntered_70;
 		return L_0;
 	}
 }
@@ -35816,8 +36201,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_s
 	{
 		// set => m_AudioClipForOnHoverEntered = value;
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = ___value0;
-		__this->___m_AudioClipForOnHoverEntered_59 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AudioClipForOnHoverEntered_59), (void*)L_0);
+		__this->___m_AudioClipForOnHoverEntered_70 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AudioClipForOnHoverEntered_70), (void*)L_0);
 		return;
 	}
 }
@@ -35825,7 +36210,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_g
 {
 	{
 		// get => m_PlayAudioClipOnHoverExited;
-		bool L_0 = __this->___m_PlayAudioClipOnHoverExited_60;
+		bool L_0 = __this->___m_PlayAudioClipOnHoverExited_71;
 		return L_0;
 	}
 }
@@ -35833,7 +36218,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AudioClip_t5D272C4EB4F2D3ED49F1C3
 {
 	{
 		// get => m_AudioClipForOnHoverExited;
-		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___m_AudioClipForOnHoverExited_61;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___m_AudioClipForOnHoverExited_72;
 		return L_0;
 	}
 }
@@ -35842,8 +36227,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XRBaseControllerInteractor_s
 	{
 		// set => m_AudioClipForOnHoverExited = value;
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = ___value0;
-		__this->___m_AudioClipForOnHoverExited_61 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AudioClipForOnHoverExited_61), (void*)L_0);
+		__this->___m_AudioClipForOnHoverExited_72 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AudioClipForOnHoverExited_72), (void*)L_0);
 		return;
 	}
 }
@@ -35851,7 +36236,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_g
 {
 	{
 		// get => m_PlayHapticsOnSelectEntered;
-		bool L_0 = __this->___m_PlayHapticsOnSelectEntered_65;
+		bool L_0 = __this->___m_PlayHapticsOnSelectEntered_76;
 		return L_0;
 	}
 }
@@ -35859,7 +36244,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_g
 {
 	{
 		// get => m_PlayHapticsOnSelectExited;
-		bool L_0 = __this->___m_PlayHapticsOnSelectExited_68;
+		bool L_0 = __this->___m_PlayHapticsOnSelectExited_79;
 		return L_0;
 	}
 }
@@ -35867,7 +36252,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XRBaseControllerInteractor_g
 {
 	{
 		// get => m_PlayHapticsOnHoverEntered;
-		bool L_0 = __this->___m_PlayHapticsOnHoverEntered_74;
+		bool L_0 = __this->___m_PlayHapticsOnHoverEntered_85;
 		return L_0;
 	}
 }
@@ -36171,5 +36556,46 @@ IL_0034:
 	{
 		float L_13 = V_0;
 		return L_13;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Equality_m15951D1B53E3BE36C9D265E229090020FBD72EBB_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___lhs0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___rhs1, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	float V_2 = 0.0f;
+	float V_3 = 0.0f;
+	bool V_4 = false;
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___lhs0;
+		float L_1 = L_0.___x_2;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___rhs1;
+		float L_3 = L_2.___x_2;
+		V_0 = ((float)il2cpp_codegen_subtract(L_1, L_3));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = ___lhs0;
+		float L_5 = L_4.___y_3;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___rhs1;
+		float L_7 = L_6.___y_3;
+		V_1 = ((float)il2cpp_codegen_subtract(L_5, L_7));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = ___lhs0;
+		float L_9 = L_8.___z_4;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___rhs1;
+		float L_11 = L_10.___z_4;
+		V_2 = ((float)il2cpp_codegen_subtract(L_9, L_11));
+		float L_12 = V_0;
+		float L_13 = V_0;
+		float L_14 = V_1;
+		float L_15 = V_1;
+		float L_16 = V_2;
+		float L_17 = V_2;
+		V_3 = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_12, L_13)), ((float)il2cpp_codegen_multiply(L_14, L_15)))), ((float)il2cpp_codegen_multiply(L_16, L_17))));
+		float L_18 = V_3;
+		V_4 = (bool)((((float)L_18) < ((float)(9.99999944E-11f)))? 1 : 0);
+		goto IL_0043;
+	}
+
+IL_0043:
+	{
+		bool L_19 = V_4;
+		return L_19;
 	}
 }
